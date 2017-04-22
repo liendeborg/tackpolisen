@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 
-var DEV_API = "http://localhost/Checklist/api";
+var DEV_API = "http://localhost/api/";
 
 module.exports = {
     headers: { 
