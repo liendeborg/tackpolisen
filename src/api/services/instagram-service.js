@@ -1,9 +1,9 @@
 angular.module('app.tackpolisen.api')
-  .factory('Checklist', Checklist);
+  .factory('Instagram', Instagram);
 
-Checklist.$inject = [ '$http' ];
+Instagram.$inject = [ '$http' ];
 
-function Checklist($http) {
+function Instagram($http) {
   const apiUrl = angular.isDefined(window.__env) ? window.__env.apiUrl || DEV_API : DEV_API;
   
   
