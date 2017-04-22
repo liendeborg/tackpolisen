@@ -1,0 +1,49 @@
+<div class="modal-header">
+    <span ng-show="$ctrl.checklistGroupForm.ID">Edit </span>
+    <h3 class="modal-title" id="modal-title">Checklist Group</h3>
+</div>
+<div class="modal-body" id="modal-body">
+    <ul>
+        <li ng-repeat="item in $ctrl.items">
+            <a href="#" ng-click="$event.preventDefault(); $ctrl.selected.item = item">{{ item }}</a>
+        </li>
+    </ul>
+    <pre>
+    Title
+    ShortTitle
+    Description
+    ###
+    checklistID 
+    id
+    </pre>
+    <pre>{{ $ctrl.checklistGroupForm | json }}</pre>
+
+    <form name="checklistGroupForm" ng-submit="expression">
+        <input type="hidden" id="modal-checklist-id" ng-model="$ctrl.checklistGroupForm.ChecklistID" required />
+        <div class="form-group">
+            <label for="modal-checklist-group-title">Title</label>
+            <input type="text" class="form-control" id="modal-checklist-group-title" placeholder="Title" ng-model="$ctrl.checklistGroupForm.Title">
+        </div>
+        <div class="form-group">
+            <label for="modal-checklist-group-short-title">Short title</label>
+            <input type="text" class="form-control" id="modal-checklist-group-short-title" placeholder="Type an abbreviation of the title..." maxlength="15" ng-model="$ctrl.checklistGroupForm.ShortTitle">
+        </div>
+        <div class="form-group">
+            <label for="modal-checklist-group-description">Description</label>
+            <textarea class="form-control" id="modal-checklist-group-description" placeholder="Description" ng-model="$ctrl.checklistGroupForm.Description"></textarea>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button-group class="btn-group pull-left" ng-show="$ctrl.checklistGroupForm.ID">
+        <button class="btn btn-danger" type="button" ng-click="$ctrl.removeChecklistItem()">Delete</button>
+    </button-group>
+    <button-toolbar class="pull-right">
+        <button-group class="btn-group">
+            <button class="btn btn-default" type="button" ng-click="$ctrl.cancel()">Cancel</button>
+        </button-group>
+        <button-group class="btn-group">
+            <button class="btn btn-primary" type="submit" ng-click="$ctrl.save()">Save</button>
+        </button-group>
+    </button-toolbar>
+</div>

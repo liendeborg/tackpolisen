@@ -1,0 +1,15 @@
+.ip-content-wrapper {
+  display:flex;
+  height:100%;
+  flex: auto;
+}
+
+.ip-content-view {
+  position:relative;
+  background:#fff;
+  flex: 1;
+  margin:10px;
+  display: flex;
+  flex-direction: column;
+  padding:10px;
+}

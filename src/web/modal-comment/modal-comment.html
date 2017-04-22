@@ -1,0 +1,47 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">
+        <span ng-show="$ctrl.commentForm.ID">Edit </span>
+        <b>Comment</b>
+    </h3>
+</div>
+<div class="modal-body" id="modal-body">
+    <pre>
+    Title
+    ShortTitle
+    Description
+    Exception handling
+    Active status
+    ###
+    ChecklistGroupID 
+    id
+    </pre>
+    <form name="checklistCommentForm" ng-submit="expression">
+        <input type="hidden" id="modal-result-id" ng-model="$ctrl.commentForm.ResultID" required />
+        <pre>{{$ctrl.commentForm | json }}</pre>
+
+        <div class="form-group">
+            <label for="modal-comment-status">Comment status</label><br>
+            <div class="btn-group">
+                <label information class="btn btn-default" ng-model="$ctrl.commentForm.CommenStatusID" uib-btn-radio="'Information'"><i class="fa fa-info" aria-hidden="true"></i> &nbsp; Information</label>
+                <label error class="btn btn-default" ng-model="$ctrl.commentForm.CommenStatusID" uib-btn-radio="'Error'"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> &nbsp; Error</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="modal-comment-text" required>Text</label>
+            <textarea class="form-control" id="modal-comment-text" placeholder="Comment" ng-model="$ctrl.commentForm.Text"></textarea>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button-group class="btn-group pull-left" ng-show="$ctrl.commentForm.ID">
+        <button class="btn btn-danger" type="button" ng-click="$ctrl.removeComment()">Delete</button>
+    </button-group>
+    <button-toolbar class="pull-right">
+        <button-group class="btn-group">
+            <button class="btn btn-default" type="button" ng-click="$ctrl.cancel()">Cancel</button>
+        </button-group>
+        <button-group class="btn-group">
+            <button class="btn btn-primary" type="submit" ng-click="$ctrl.save()">Save</button>
+        </button-group>
+    </button-toolbar>
+</div>

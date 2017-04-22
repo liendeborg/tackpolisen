@@ -1,0 +1,55 @@
+.ip-tabset {
+  .uib-tab {
+    background: #ddd;
+    padding-top: 2px;
+    font-weight: bold;
+    &.active {
+      background: #eee;
+      border: 0px;
+      padding-top: 0px;
+      border-top: 3px solid #00005B;
+    }
+    a {
+      color: #aaa;
+    }
+    &.active a,
+    &.active a:hover,
+    &.active a:focus,
+    a:hover,
+    a:focus,
+    a:active {
+      border: 1px solid transparent;
+      background-color: transparent;
+    }
+  }
+  .nav-pills {
+    list-style-type: none;
+    background: none;
+    background: #eee;
+    height: 100%;
+    li {
+      &:not(:last-of-type) {
+        margin: 3px 3px 0px 3px;
+      }
+      &:last-of-type {
+        margin: 3px 3px 3px 3px;
+      }
+      background: #fff;
+      float: none;
+      display: block;
+      font-size: 12px;
+
+      a {
+        &:hover {
+          background: $ipms-color-lightest-purple;
+          color: $ipms-color-purple;
+        }
+        display: block;
+        border-radius: 0px;
+        color: $ipms-color-light-purple;
+        padding: 5px;
+      }
+    }
+
+  }
+}

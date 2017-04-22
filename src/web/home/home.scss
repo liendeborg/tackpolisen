@@ -1,0 +1,251 @@
+@import '../../sass/modules/variables.scss';
+@import '../global/global.scss';
+
+home {
+    position: relative; 
+
+    section {
+        display: block;
+        padding: 2em 2em 6em 2em;
+    }
+    sidebar {
+        display: block;
+        position: relative;
+        width: 100%;
+    }
+
+    video-section {
+        display: block;
+        overflow: hidden;
+        position: relative;
+        margin: 0 auto;
+        width: 100%;
+        height: auto;
+        max-width: $page-width-lg;
+        border-radius: 5px;
+        overflow: hidden;
+        background: $color-white;
+    }
+    video {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        background-size: cover;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    video#bgvid { 
+        position: fixed;
+        //position: fixed;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        //background: url(polina.jpg) no-repeat;
+        background-size: cover; 
+    }
+    video-overlay {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        //background: rgba(0,0,0,0.3);
+        //background: rgba(23,155,247,0.8)
+        //background: (#159af7, 0.55);
+        background: linear-gradient(165deg, rgba(255,255,255,1) 15%,rgba(255,255,255,0) 40%);
+    }
+    quote-overlay {
+        display: block;
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        font-size: 3.4em;
+        color: #fff;
+        font-weight: bold;
+        max-width: 480px;
+        color: $color-blue;
+        line-height: 0.5em;
+
+        number {
+            display: block;
+            font-size: 1.5em;
+
+            i {
+                color: $color-red;
+            }
+        }
+        span {
+            display: block;
+            font-size: 0.5em;
+            margin-left: 4em;
+            color: $color-dark-blue;
+        }
+    }
+    byline {
+        display: block;
+        position: absolute;
+        bottom: 1.8em;
+        left: 1.5em;
+        background: rgba(0,0,0,0.4);
+        color: $color-white;
+        font-size: 1em;
+        border-radius: 2px;
+        padding: 0.3em 0.5em;
+        a {
+            color: $color-white;
+            &:hover {
+                color: $color-neon;
+                text-decoration: none; 
+            }
+        }
+    }
+    intro-section {
+        display: block;
+        padding: 2em 0em;
+        font-size: 1.0em;
+        line-height: 2.2em;
+        color: $color-gray;
+        position: relative;
+        overflow: hidden;
+        max-width: 800px;
+
+        &.collapsed {
+            height: 450px;
+        }
+        &.expanded {
+            height: auto;
+            intro-overlay {
+                opacity: 0;
+            }
+        }
+
+        & + button {
+            /*display: block !important;
+            margin: 0 auto;*/
+        }
+
+        p {
+            padding-bottom: 1em;
+
+            &:first-child {
+                font-size: 2em;
+                line-height: 1.4em;
+            }
+        }
+
+        b {
+            color: $color-blue;
+        }
+
+        intro-overlay {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(rgba(255,255,255,0) 25%, rgba(255,255,255,1) 100%) !important;
+            pointer-events: none;
+            opacity: 1;
+            transition: opacity 0.2s;
+        }
+    }
+    .intro-column {
+        margin-top: -50px;
+    }
+
+    .profile-picture {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        margin-right: 20px;
+        border-radius: 400px;
+        background: #cccccc url("/src/assets/images/robinliendeborg.jpg") no-repeat center center;
+        background-size: cover;
+    }
+
+    card-box {
+        //-webkit-transition: all 1s 0s cubic-bezier(.215,.61,.355,1);
+        transition: all 1s 0s cubic-bezier(.215,.61,.355,1);
+        transform: translate3d(0px, -21px, 0px);
+        position: relative;
+        display: block;
+        background: #009ce5;
+        background: rgba($color-light-blue,0.95);
+        color: #ffffff;
+        padding: 1em 2em;
+
+        &.first-child {
+            top: -120px !important;
+        }
+
+        p {
+            font-size: 1.4em;
+            margin-bottom: 1em;
+        }
+
+        &.neon {
+            background: $color-neon;
+        }
+        &.dark-blue {
+            background: $color-dark-blue;
+        }
+    }
+
+    stroke {
+        background-image: url("/src/assets/images/stroke1.svg");
+        background-repeat: no-repeat;
+        background-position: center 115%;
+        background-size: auto 28%;
+        padding-bottom: 3px;
+    }
+
+    @media screen and (min-width: $page-width-xs) {
+        section {
+            padding: 2em 4em 8em 4em;
+        }
+        card-box {
+            padding: 1em 4em;
+        }
+    }
+    // Special media query for sidebar
+    @media screen and (min-width: 1000px) {
+        section {
+            max-width: 630px;
+        }
+        sidebar {
+            position: absolute;
+            top: -20.45em;
+            right: 1.5em;
+            width: 25%;
+            width: 280px;
+        }
+        card-box {
+            border-radius: 3px;
+            margin-bottom: 3em;
+            padding: 0.5em 1.5em;
+            min-height: 20em;
+        }
+    }
+    @media screen and (min-width: $page-width-lg) {
+        section {
+            max-width: calc(100% - 400px);
+        }
+        sidebar {
+            position: absolute;
+            top: -20.45em;
+            right: 1.5em;
+            width: 320px;
+        }
+    }
+}

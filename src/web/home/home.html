@@ -1,0 +1,71 @@
+<page-wrapper>
+  <page-header></page-header>
+  <page-hero>
+    <video-section>
+      <video playsinline autoplay muted loop poster="../../src/assets/images/polisbild.jpg" id="bgvid2">
+        <source src="../../src/assets/videos/polisen.webm" type="video/webm">
+        <source src="../../src/assets/videos/polisen.mp4" type="video/mp4">
+      </video>
+      <video-overlay></video-overlay>
+      <quote-overlay>
+          <number><i class="fa fa-heart" aria-hidden="true"></i> 1 034 tack</number>
+          <span>- säg tack du också!</span>
+      </quote-overlay>
+      <byline>Foto av  <a href="https://twitter.com/HermanCaroan">Herman Caroan</a>, minnesdagen den 9 april 2017</byline>
+    </video-section>
+  </page-hero>
+
+  <page-container>
+    <page-content>
+      <article>
+        <section>
+          <intro-section ng-class="$ctrl.introSectionIsOpen === true ? 'expanded' : 'collapsed'">
+              <p><b>#TackPolisen</b> är en folkrörelse till minne av den <b>7 april 2017</b> då en terrorattack ägde rum i centrala Stockholm och krävde livet på fyra människor. Vi upplåter denna dag för att hylla poliser och utryckningspersonal som dagligen utför gärningar utöver det vanliga för att skydda samhället och oss invånare från hot och livsfara.</p>
+              <p>Under år 2016 fick polisen uppseendeväckande mycket kritik av folket och i media på grund av brister i sitt arbete. Men när det väl kom till kritan den 7 april så kan nog de flesta enas om att polisen och utryckningspersonal utförde ett utomordentligt arbete som var strukturerat, effektivt och mycket professionellt. De visade upp sin allra bästa sida. Det är lätt att glömma bort att polisen finns där varje dag för att beskydda och hjälpa oss. Därför ämnar den här rörelsen att lyfta och bekräfta polisers högaktningsvärda insatser när de går in för att bemöta hoten medans vi andra flyr därifrån.</p>
+              <p>Vi anser att en trygg och tillitsfull dialog mellan invånare och polis är viktigt för att samhället ska utvecklas i rätt riktning. Vi vill bidra till att den tilliten upprätthålls genom att hylla och dela ut stipendier till poliser, utryckningspersonal och anställda inom  polisväsendet som uppvisat föredömligt beteende, agerat medmänskligt i dialog med invånare, eller agerat med risk av sitt eget liv för att skydda invånare i en pressad situation. Genom att bekräfta beundransvärda polisiära insatser hoppas vi bidra till att tilliten stärks mellan folket och svenska polisen.</p>
+              <p>Använd hashtaggen <b>#TackPolisen</b> och sprid positiva inlägg när polisen gör ett bra jobb. Gott uppförande ska uppmuntras!</p>
+              <p>Stöd initiativet genom att skriva upp dig på listan, donera valfritt belopp som går till att belöna beundransvärda poliser eller dela med dina vänner.</p>
+              <p>Tack polisen för att ni finns!</p>
+              <div>
+                  <div class="pull-left profile-picture"></div>
+                  <div class="pull-left">
+                    <b>Robin Liendeborg</b><br>
+                    Grundare #TackPolisen <br>
+                    Social Entreprenör & Samhällsaktivist
+                  </div>
+              </div>
+              <intro-overlay></intro-overlay>
+          </intro-section>
+          <button class="btn btn-lg btn-blue" ng-hide="$ctrl.introSectionIsOpen" ng-click="$ctrl.toggleIntroSection()">Läs ändamålsförklaringen</button>
+          <button class="btn btn-lg btn-circle-white" ng-hide="$ctrl.introSectionIsOpen" ng-click="$ctrl.toggleIntroSection()"><i class="fa fa-arrow-down" aria-hidden="true"></i></button>
+        </section>
+        <sidebar>
+          <card-box class="blue">
+            <h1>Donera</h1>
+            <p>Du kan bidra med valfritt belopp via Swish.</p>
+            <p>076 188 27 46</p>
+          </card-box>
+          <card-box class="dark-blue">
+            <h1>Nominera</h1>
+            <p>Nominera en polis eller anställd vid polisväsendet som visat prov på beundransvärda insatser.</p>
+          </card-box>
+          <card-box class="neon">
+            <h1>Nominera</h1>
+            <p>Nominera en polis eller anställd vid polisväsendet som uppvisat föredömliga insatser gentemot invånarna.</p>
+          </card-box>
+        </sidebar>
+      </article>
+      <article>
+        <h2>Du kan dela dina inlägg på följande vis:</h2>
+        
+        <div>
+          <div>Info här</div>
+          <div>Info här</div>
+          <div>Info här</div>
+        </div>
+      </article>
+    </page-content>
+    <wall></wall>
+  </page-container>
+</page-wrapper>
+<page-footer></page-footer>

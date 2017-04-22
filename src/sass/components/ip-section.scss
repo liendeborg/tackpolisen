@@ -1,0 +1,21 @@
+.ip-section {
+  padding: 5px;
+  label {
+    padding-left: 0px;
+  }
+  .form-group {
+    &:hover {
+      background: #efefef;
+    }
+    label {
+      color: $ipms-color-gray;
+      font-weight: normal;
+    }
+  }
+}
+
+.ip-section.active {
+  /* border: 1px dashed #555; */
+  background: #efefef;
+  border-radius: 0px;
+}

@@ -1,0 +1,7 @@
+## Ignore files
+
+# User-specific folders
+node_modules/
+
+# User-specific files
+*.log

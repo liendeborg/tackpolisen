@@ -1,0 +1,262 @@
+@import '../../sass/modules/variables.scss';
+
+p {
+    font-size: 1.6em;
+}
+
+body {
+    background: $color-beige !important;
+    background: $color-lightest-blue !important;
+
+    // http://www.svgeneration.com/recipes/College-Ruled/
+    /*background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZlcnNpb249JzEuMScgd2lkdGg9JzEwMCUnIGhlaWdodD0nMTAwJSc+CiAgPGRlZnMgaWQ9J2RlZnM0Jz4KCQk8ZmlsdGVyIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0nc1JHQicgaWQ9J2YnPgoJCQk8ZmVUdXJidWxlbmNlIHR5cGU9J2ZyYWN0YWxOb2lzZScgYmFzZUZyZXF1ZW5jeT0nMTAwIC44NScgbnVtT2N0YXZlcz0nMScvPgoJCTwvZmlsdGVyPgoJCTxwYXR0ZXJuIHBhdHRlcm5Vbml0cz0ndXNlclNwYWNlT25Vc2UnIHBhdHRlcm5UcmFuc2Zvcm09J3RyYW5zbGF0ZSgwIDgwKScgaWQ9J2wnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzM2Jz4KCQkJPGxpbmUgeDE9Jy0xMCUnIHkxPScxJyB4Mj0nMTEwJScgeTI9JzEnIHN0cm9rZT0nIzAwM2M4Zicgc3Ryb2tlLXdpZHRoPScxJy8+CgkJPC9wYXR0ZXJuPgoJCTxwYXR0ZXJuIHBhdHRlcm5Vbml0cz0ndXNlclNwYWNlT25Vc2UnIGlkPSdwJyB3aWR0aD0nMTAwJyBoZWlnaHQ9JzEwMCc+CgkJCTxyZWN0IHg9Jy0xMCcgeT0nLTEwJyBoZWlnaHQ9JzEyMCcgd2lkdGg9JzEyMCcgc3R5bGU9J2ZpbHRlcjp1cmwoI2YpJyAvPgoJCTwvcGF0dGVybj4KCTwvZGVmcz4KCTxyZWN0IHg9Jy0xMCUnIHk9Jy0xMCUnIGhlaWdodD0nMTIwJScgd2lkdGg9JzEyMCUnIHN0eWxlPSdmaWxsOnVybCgjcCknIC8+Cgk8cmVjdCB4PSctMTAlJyB5PSc4MCcgaGVpZ2h0PScxMDAlJyB3aWR0aD0nMTIwJScgc3R5bGU9J2ZpbGw6dXJsKCNsKScgLz4KCTxsaW5lIHgxPSc4MCcgeTE9Jy01JScgeDI9JzgwJyB5Mj0nMTA1JScgc3Ryb2tlPScjODU2JyAvPgoJPHJlY3QgeD0nLTUwJScgeT0nLTUwJScgaGVpZ2h0PScyMDAlJyB3aWR0aD0nMjAwJScgc3R5bGU9J2ZpbGw6I2ZmZjtmaWxsLW9wYWNpdHk6MC44OycvPgo8L3N2Zz4K) !important;*/
+}
+
+page-header {
+    clear: both;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: $page-width-lg;
+}
+page-footer {
+    display: block;
+}
+page-wrapper {
+    display: block;
+    padding: 0px;
+
+    @media screen and (min-width: $page-width-sm) {
+        padding: 0 4em;
+    }
+}
+page-container {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+page-content {
+    clear: both;
+    display: block;
+    margin: 0 auto;
+    background: $color-white;
+
+    page-content-wrapper {
+        display: block;
+        max-width: $page-width-lg;
+        margin: 0 auto;
+        position: relative;
+    }
+}
+page-hero {
+    display: block;
+    position: relative;
+    background: none;
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 50%;
+        background: $color-beige;
+
+        background: $color-white;
+    }
+    img {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.3);
+        background: rgba($color-blue,0.85);
+        //background: linear-gradient(to right, rgba(255,255,255,0) 75%,rgba(255,255,255,1) 100%);
+        //background: rgba(255,255,255,0.3);
+    }
+    hero-title {
+        display: block;
+        position: absolute;
+        top: 50%;
+        text-transform: uppercase;
+        color: $color-white;
+        font-size: 4em;
+    }
+}
+
+article {
+    max-width: $page-width-lg;
+    margin: 0 auto;
+    position: relative;
+}
+
+.btn {
+    border-radius: 2px !important;
+}
+
+page-header {
+    display: block;
+    margin: 120px auto;
+    margin-bottom: 1em;
+
+    logo {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+
+        h1.page-title {
+            display: block;
+            color: $color-dark-blue;
+            font-size: 3.5em;
+            transform: rotate(-2deg);
+
+            // SVG Icon
+            background-image: url("/src/assets/images/stroke2-white.svg");
+            background-repeat: no-repeat;
+            background-position: center -125%;
+            background-size: auto 28%;
+            background-size: 100% 115%;
+
+            &:hover {
+                color: $color-blue;
+                cursor: pointer;
+            }
+            @media screen and (min-width: $page-width-xs) {
+                font-size: 5em;
+            }
+            @media screen and (min-width: $page-width-sm) {
+                font-size: 7.5em;
+            }
+            @media screen and (min-width: $page-width-md) {
+                font-size: 8.5em;
+            }
+            @media screen and (min-width: $page-width-lg) {
+                font-size: 9em;
+            }
+        }
+        h2.page-slogan {
+            display: block;
+            color: $color-gray;
+            font-weight: lighten;
+            font-size: 1.3em;
+            line-height: 0.2em;
+            padding: 1em;
+
+            span {
+                display: inline-block;
+                padding: 1.3em 0.5em;
+                color: $color-blue;
+                font-weight: bold;
+                //border-bottom: 0.1em solid $color-blue;
+
+                background-image: url("/src/assets/images/stroke2-white.svg");
+                background-repeat: no-repeat;
+                background-position: center 20%;
+                background-size: auto 28%;
+                background-size: 100% 150%;
+            }
+            @media screen and (min-width: $page-width-md) {
+                font-size: 1.4em;
+            }
+            @media screen and (min-width: $page-width-lg) {
+                font-size: 1.6em;
+            }
+        }
+    }
+    
+    nav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin: 0px;
+        margin-top: 8em;
+
+        a {
+            display: flex;
+            flex-grow: 1;
+            position: relative;
+            bottom: 0px;
+
+            padding: 0.7em 1em;
+            font-size: 1.4em;
+            color: $color-gray;
+            border: 0.1em solid #fff;
+            transition: all 0.2s;
+            //border-radius: 5px;
+            border-radius: 0;
+            text-decoration: none;
+            cursor: pointer;
+            background: #fff;
+            margin: 0 0.1em;
+            margin-bottom: 0px;
+
+            &:first-child {
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px; 
+            }
+            &:last-child {
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+
+            &:hover {
+                border: 0.1em solid $color-blue;
+                color: $color-blue;
+                text-decoration: none;
+            }
+            &:focus,
+            &:active {
+                text-decoration: none;
+            }
+            &.active,
+            &.active:hover {
+                border: 0.1em solid $color-blue;
+                background: $color-blue;
+                color: $color-white;
+            }
+        }
+    }
+    .btn-thank-police {
+        position: absolute;
+        top: 0;
+        right: 40px;
+        border-radius: 0px;
+        font-size: 1.4em;
+        padding: 1.2em 1.8em;
+
+        &:hover {
+
+        }
+    }
+}
+.btn.btn-blue {
+    border: 0.1em solid $color-blue;
+    color: $color-white;
+    background: $color-blue; 
+    transition: all 0.2s;
+
+    &:hover {
+        background: $color-light-blue;
+        border-color: $color-light-blue;
+        color: $color-white;
+        outline: none;
+    }
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
+
+.btn.btn-circle-white {
+    border-radius: 400px;
+    background: $color-white;
+    color: $color-black;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.22);
+}

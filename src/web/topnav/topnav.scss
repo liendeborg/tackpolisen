@@ -1,0 +1,63 @@
+@import '../../sass/modules/colors.scss';
+
+topnav {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 80px;
+    background: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.22);
+    z-index: 2;
+    padding: 0px;
+
+    transform: translate3d(0, -100%, 0);
+    transition: all 0.3s;
+
+    &.show {
+        transform: translate3d(0, 0%, 0);
+    }
+
+    logo {
+        color: $color-dark-blue;
+        float: left;
+        margin: 15px 0px 0px 20px;
+        font-size: 2.4em;
+        font-weight: bold;
+        color: $color-blue;
+
+        &:hover {
+            color: $color-blue;
+            cursor: pointer;
+        }
+    }
+    nav {
+        display: flex;
+        flex-direction: row;
+
+        a {
+            position: relative;
+            top: 0.2em;
+            padding: 0.6em 1em;
+            font-size: 1.3em;
+            color: $color-gray;
+            border: 0.1em solid #fff;
+            transition: all 0.2s;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+
+            &:hover {
+                border: 0.1em solid $color-blue;
+                color: $color-blue;
+                text-decoration: none;
+            }
+            &:focus,
+            &:active {
+                text-decoration: none;
+            }
+        }
+    }
+}

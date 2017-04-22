@@ -1,0 +1,39 @@
+// The modules directory holds all sass files that does not directly
+// output any css to the screen. This might be mixins, variables and what
+// not.
+@import "modules/modules.scss";
+
+// The components directory contains sass files that hold the actual styling
+// that you want to output. This directory should only hold sass files that
+// have no clear context or component belonging as the component sass files
+// should be placed together with their corresponding component.
+@import "components/components.scss";
+
+
+html,
+body {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+body {
+  background-color: #E6E6E6!important;
+  display: flex;
+  font-family: 'Noto Sans', 'Helvetica', 'Calibri Light';
+}
+
+.ip-section {
+  flex: 1;
+}
+
+.flex-one {
+  flex: 1;
+}
+
+.init-flexed {
+  flex: initial;
+}
+
+p {
+  font-size: 1.6em;
+}

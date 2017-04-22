@@ -1,0 +1,124 @@
+@import '../../sass/modules/colors.scss';
+
+wall {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+card-container {
+    position: relative;
+    padding: 1em 0em;
+    margin-left: -1.5em;
+    width: calc(100% + 3em);
+    clear: both;
+    display: block;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+card {
+    align-self: flex-start;
+    flex-grow: 1;
+    flex-shrink: 0;
+    
+    width: 320px;
+    max-width: 420px;
+    background: $color-white;
+    margin: 1.5em;
+    border-radius: 3px;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+
+    //border: 1px solid #e6ecf0;
+    box-shadow: 0px 1px 3px rgba(darken(#e6ecf0,5%),1);
+    box-shadow: 0px 1px 3px rgba(darken($color-beige,5%),1);
+
+    &:hover {
+        
+    }
+
+    post-details {
+        display: block;
+        padding: 1em 1em 0.5em 1em;
+        color: $color-gray;
+        font-size: 1em;
+    }
+    post {
+        display: block;
+        margin: 0em 1em 0em 1em;
+        padding-bottom: 0.5em;
+        //padding: 0em 1em 0.5em 1em;
+        font-size: 1.4em;
+        border-bottom: 0.1em solid lighten($color-gray, 38%);
+    }
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 3px 3px 0px 0px;
+    }
+    hashtag {
+        color: $color-blue;
+    }
+    a {
+        color: $color-blue;
+        &:hover {
+            color: $color-dark-blue;
+            border-bottom: 1px solid $color-dark-blue;
+            text-decoration: none;
+        }
+    }
+    
+    button-toolbar {
+        display: flex;
+        flex-direction: row;
+
+        button.btn {
+            display: block;
+            width: 100%;
+            font-size: 1.1em;
+            padding: 0.7em 0em;
+            background: $color-white;
+            text-align: center;
+            font-weight: bold;
+            outline: none;
+
+            &:hover {
+                color: $color-blue;
+                outline: none;
+            }
+            &:active,
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}
+
+button.btn-load-card {
+    margin: 3em auto;
+    display: block;
+    padding: 1.5em 2em;
+    width: 100%;
+    min-width: 320px;
+    max-width: 600px;
+    font-size: 1.4em;
+    text-align: center;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.22);
+
+    box-shadow: 
+        0px 1px 2px 0px rgba(0, 0, 0, 0.2), 
+        0px 0px 1px 0px rgba(0,0,0,0.2);
+
+    &:hover {
+        color: $color-blue;
+        outline: none;
+    }
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
