@@ -26,6 +26,7 @@ p {
     top: 0px;
     left: 0px;
     right: 0px;
+    opacity: 0.5;
 }
 
 page-header {
@@ -234,8 +235,8 @@ page-header {
             }
             &.active,
             &.active:hover {
-                border: 0.1em solid $color-blue;
-                background: $color-blue;
+                border: 0.1em solid $color-dark-blue;
+                background: $color-dark-blue;
                 color: $color-white;
 
                 &:hover {

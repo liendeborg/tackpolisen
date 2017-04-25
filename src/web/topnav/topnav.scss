@@ -72,8 +72,11 @@ topnav {
             transition: all 0.3s;
 
             &.active {
-                border-bottom: 0.4em solid $color-blue;
-                color: $color-blue;
+                border-bottom: 0.4em solid $color-dark-blue;
+                color: $color-dark-blue;
+                &:hover {
+                    color: $color-dark-blue;
+                }
             }
 
             &:hover {
@@ -168,7 +171,7 @@ topnav {
                 margin-right: 0.5em;
 
                 &.active {
-                    border-bottom: 0.5em solid $color-blue;
+                    border-bottom: 0.5em solid $color-dark-blue;
                 }
             }
         }
