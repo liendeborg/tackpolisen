@@ -1,15 +1,31 @@
 @import '../../sass/modules/variables.scss';
 
+body {
+    background: $color-beige !important;
+    //background: $color-lightest-blue !important;
+
+    // http://www.svgeneration.com/recipes/College-Ruled/
+    /*background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZlcnNpb249JzEuMScgd2lkdGg9JzEwMCUnIGhlaWdodD0nMTAwJSc+CiAgPGRlZnMgaWQ9J2RlZnM0Jz4KCQk8ZmlsdGVyIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0nc1JHQicgaWQ9J2YnPgoJCQk8ZmVUdXJidWxlbmNlIHR5cGU9J2ZyYWN0YWxOb2lzZScgYmFzZUZyZXF1ZW5jeT0nMTAwIC44NScgbnVtT2N0YXZlcz0nMScvPgoJCTwvZmlsdGVyPgoJCTxwYXR0ZXJuIHBhdHRlcm5Vbml0cz0ndXNlclNwYWNlT25Vc2UnIHBhdHRlcm5UcmFuc2Zvcm09J3RyYW5zbGF0ZSgwIDgwKScgaWQ9J2wnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzM2Jz4KCQkJPGxpbmUgeDE9Jy0xMCUnIHkxPScxJyB4Mj0nMTEwJScgeTI9JzEnIHN0cm9rZT0nIzAwM2M4Zicgc3Ryb2tlLXdpZHRoPScxJy8+CgkJPC9wYXR0ZXJuPgoJCTxwYXR0ZXJuIHBhdHRlcm5Vbml0cz0ndXNlclNwYWNlT25Vc2UnIGlkPSdwJyB3aWR0aD0nMTAwJyBoZWlnaHQ9JzEwMCc+CgkJCTxyZWN0IHg9Jy0xMCcgeT0nLTEwJyBoZWlnaHQ9JzEyMCcgd2lkdGg9JzEyMCcgc3R5bGU9J2ZpbHRlcjp1cmwoI2YpJyAvPgoJCTwvcGF0dGVybj4KCTwvZGVmcz4KCTxyZWN0IHg9Jy0xMCUnIHk9Jy0xMCUnIGhlaWdodD0nMTIwJScgd2lkdGg9JzEyMCUnIHN0eWxlPSdmaWxsOnVybCgjcCknIC8+Cgk8cmVjdCB4PSctMTAlJyB5PSc4MCcgaGVpZ2h0PScxMDAlJyB3aWR0aD0nMTIwJScgc3R5bGU9J2ZpbGw6dXJsKCNsKScgLz4KCTxsaW5lIHgxPSc4MCcgeTE9Jy01JScgeDI9JzgwJyB5Mj0nMTA1JScgc3Ryb2tlPScjODU2JyAvPgoJPHJlY3QgeD0nLTUwJScgeT0nLTUwJScgaGVpZ2h0PScyMDAlJyB3aWR0aD0nMjAwJScgc3R5bGU9J2ZpbGw6I2ZmZjtmaWxsLW9wYWNpdHk6MC44OycvPgo8L3N2Zz4K) !important;*/
+
+    //background: $color-beige url("/src/assets/images/tackpolisen-roses5-compressed.jpg") no-repeat top center !important;
+    //background-repeat: no-repeat;
+    //background-position: center -125%;
+    //background-size: auto 28%;
+    //background-size: 100% auto !important;
+}
+
 p {
     font-size: 1.6em;
 }
 
-body {
-    background: $color-beige !important;
-    background: $color-lightest-blue !important;
-
-    // http://www.svgeneration.com/recipes/College-Ruled/
-    /*background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZlcnNpb249JzEuMScgd2lkdGg9JzEwMCUnIGhlaWdodD0nMTAwJSc+CiAgPGRlZnMgaWQ9J2RlZnM0Jz4KCQk8ZmlsdGVyIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0nc1JHQicgaWQ9J2YnPgoJCQk8ZmVUdXJidWxlbmNlIHR5cGU9J2ZyYWN0YWxOb2lzZScgYmFzZUZyZXF1ZW5jeT0nMTAwIC44NScgbnVtT2N0YXZlcz0nMScvPgoJCTwvZmlsdGVyPgoJCTxwYXR0ZXJuIHBhdHRlcm5Vbml0cz0ndXNlclNwYWNlT25Vc2UnIHBhdHRlcm5UcmFuc2Zvcm09J3RyYW5zbGF0ZSgwIDgwKScgaWQ9J2wnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzM2Jz4KCQkJPGxpbmUgeDE9Jy0xMCUnIHkxPScxJyB4Mj0nMTEwJScgeTI9JzEnIHN0cm9rZT0nIzAwM2M4Zicgc3Ryb2tlLXdpZHRoPScxJy8+CgkJPC9wYXR0ZXJuPgoJCTxwYXR0ZXJuIHBhdHRlcm5Vbml0cz0ndXNlclNwYWNlT25Vc2UnIGlkPSdwJyB3aWR0aD0nMTAwJyBoZWlnaHQ9JzEwMCc+CgkJCTxyZWN0IHg9Jy0xMCcgeT0nLTEwJyBoZWlnaHQ9JzEyMCcgd2lkdGg9JzEyMCcgc3R5bGU9J2ZpbHRlcjp1cmwoI2YpJyAvPgoJCTwvcGF0dGVybj4KCTwvZGVmcz4KCTxyZWN0IHg9Jy0xMCUnIHk9Jy0xMCUnIGhlaWdodD0nMTIwJScgd2lkdGg9JzEyMCUnIHN0eWxlPSdmaWxsOnVybCgjcCknIC8+Cgk8cmVjdCB4PSctMTAlJyB5PSc4MCcgaGVpZ2h0PScxMDAlJyB3aWR0aD0nMTIwJScgc3R5bGU9J2ZpbGw6dXJsKCNsKScgLz4KCTxsaW5lIHgxPSc4MCcgeTE9Jy01JScgeDI9JzgwJyB5Mj0nMTA1JScgc3Ryb2tlPScjODU2JyAvPgoJPHJlY3QgeD0nLTUwJScgeT0nLTUwJScgaGVpZ2h0PScyMDAlJyB3aWR0aD0nMjAwJScgc3R5bGU9J2ZpbGw6I2ZmZjtmaWxsLW9wYWNpdHk6MC44OycvPgo8L3N2Zz4K) !important;*/
+.header-bg {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
 }
 
 page-header {
@@ -123,6 +139,7 @@ page-header {
             background-position: center -125%;
             background-size: auto 28%;
             background-size: 100% 115%;
+            transition: all 0.3s;
 
             &:hover {
                 color: $color-blue;
@@ -139,6 +156,7 @@ page-header {
             }
             @media screen and (min-width: $page-width-lg) {
                 font-size: 9em;
+                margin-top: 1.5em;
             }
         }
         h2.page-slogan {
@@ -166,7 +184,7 @@ page-header {
                 font-size: 1.4em;
             }
             @media screen and (min-width: $page-width-lg) {
-                font-size: 1.6em;
+                font-size: 1.8em;
             }
         }
     }
@@ -183,9 +201,10 @@ page-header {
             flex-grow: 1;
             position: relative;
             bottom: 0px;
+            box-shadow: 0px 1px 3px rgba(0,0,0,0.12);
 
             padding: 0.7em 1em;
-            font-size: 1.4em;
+            font-size: 1.2em;
             color: $color-gray;
             border: 0.1em solid #fff;
             transition: all 0.2s;
@@ -197,18 +216,11 @@ page-header {
             margin: 0 0.1em;
             margin-bottom: 0px;
 
-            &:first-child {
-                border-top-left-radius: 5px;
-                border-bottom-left-radius: 5px; 
-            }
-            &:last-child {
-                border-top-right-radius: 5px;
-                border-bottom-right-radius: 5px;
-            }
-
             &:hover {
                 border: 0.1em solid $color-blue;
                 color: $color-blue;
+                background: $color-blue;
+                color: $color-white;
                 text-decoration: none;
             }
             &:focus,
@@ -220,6 +232,28 @@ page-header {
                 border: 0.1em solid $color-blue;
                 background: $color-blue;
                 color: $color-white;
+
+                &:hover {
+                    background: $color-dark-blue;
+                }
+            }
+            @media screen and (min-width: $page-width-sm) {
+                &:first-child {
+                    border-top-left-radius: 5px;
+                    border-bottom-left-radius: 5px; 
+                }
+                &:last-child {
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                }
+            }
+            @media screen and (min-width: $page-width-md) {
+                padding: 0.7em 1em;
+                font-size: 1.3em;
+            }
+            @media screen and (min-width: $page-width-lg) {
+                padding: 1em 1em;
+                font-size: 1.4em;
             }
         }
     }

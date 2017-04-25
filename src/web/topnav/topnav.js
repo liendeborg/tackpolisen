@@ -10,9 +10,8 @@ angular.module('app.tackpolisen.web')
         }
     });
     
-    //TopnavController.$inject = [];
-    
-    function TopnavController() {
+    TopnavController.$inject = ['$state'];
+    function TopnavController($state) {
         const vm = this;
-        vm.tackpolisen = "#TackPolisen";
+        vm.state = $state.current.name;
     }

@@ -22,7 +22,7 @@ home {
         width: 100%;
         height: auto;
         max-width: $page-width-lg;
-        border-radius: 5px;
+        border-radius: 5px 5px 0px 0px;
         overflow: hidden;
         background: $color-white;
     }
@@ -31,7 +31,7 @@ home {
         max-width: 100%;
         height: auto;
         background-size: cover;
-        border-radius: 5px;
+        border-radius: 5px 5px 0px 0px;
         overflow: hidden;
     }
     video#bgvid { 
@@ -246,6 +246,10 @@ home {
             top: -20.45em;
             right: 1.5em;
             width: 320px;
+        }
+        video-section,
+        video {
+            border-radius: 5px;
         }
     }
 }

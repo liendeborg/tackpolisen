@@ -1,7 +1,8 @@
 @import '../../sass/modules/colors.scss';
 
 topnav {
-    display: block;
+    display: flex;
+    flex-direction: row;
     position: fixed;
     top: 0;
     left: 0;
@@ -9,11 +10,15 @@ topnav {
     width: 100%;
     height: 80px;
     background: #ffffff;
-    box-shadow: 0px 1px 3px rgba(0,0,0,0.22);
+    //box-shadow: 0px 1px 3px rgba(0,0,0,0.22);
+    box-shadow: 
+        0px 1px 3px rgba(0,0,0,0.22),
+        0px 3px 8px rgba(0,0,0,0.10);
     z-index: 2;
     padding: 0px;
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0.96) 100%);
 
-    transform: translate3d(0, -100%, 0);
+    //transform: translate3d(0, -100%, 0);
     transition: all 0.3s;
 
     &.show {
@@ -26,37 +31,107 @@ topnav {
         margin: 15px 0px 0px 20px;
         font-size: 2.4em;
         font-weight: bold;
-        color: $color-blue;
+        color: $color-dark-blue;
+        cursor: pointer;
+        transition: all 0.3s;
 
         &:hover {
             color: $color-blue;
-            cursor: pointer;
         }
     }
     nav {
         display: flex;
         flex-direction: row;
+        position: relative;
+        height: 100%;
+        width: 100%;
+
+        div {
+            display: flex;
+            flex-grow: 2;
+            width: 100%;
+            height: 100%;
+        }
 
         a {
-            position: relative;
-            top: 0.2em;
-            padding: 0.6em 1em;
+            white-space: nowrap;
+            display: block;
+            height: 100%;
+            width: 100%;
+            padding: 1.5em 1em;
             font-size: 1.3em;
             color: $color-gray;
-            border: 0.1em solid #fff;
+            border: 0.1em solid transparent;
             transition: all 0.2s;
-            border-radius: 5px;
             text-decoration: none;
             cursor: pointer;
+            border-radius: 0px;
+            text-align: center;
+            transition: all 0.3s;
+
+            &.active {
+                border-bottom: 0.5em solid $color-blue;
+                color: $color-blue;
+            }
 
             &:hover {
-                border: 0.1em solid $color-blue;
                 color: $color-blue;
                 text-decoration: none;
             }
             &:focus,
             &:active {
                 text-decoration: none;
+            }
+
+            &.btn-login,
+            &.btn-thank-police {
+                display: block;
+                position: relative;
+                color: $color-white;
+                height: 100%;
+                width: auto;
+                font-size: 1.5em;
+                padding: 1.1em 1.5em;
+                border: 0px;
+                background: linear-gradient(135deg, rgba(40,110,190,1) 0%,rgba(0,156,229,1) 100%);
+                background: $color-red;
+                background: linear-gradient(135deg, rgba(175,28,28,1) 0%,rgba(241,50,37,1) 100%);
+                background: $color-dark-blue;
+
+                .circle {
+                    /*display: block;
+                    position: absolute;
+                    top: 0.5em;
+                    left: -1.5em;
+                    background: $color-blue;
+                    border-radius: 10em;
+                    width: 2.5em;
+                    height: 2.5em;*/
+                }
+
+                i {
+                    color: $color-red;
+                    left: 0.5em;
+                    top: 0.4em;
+                    /*top: 0.2em;
+                    left: -0.1em;*/
+                    font-size: 2em;
+                    position: absolute;
+                    color: $color-dark-blue;
+                    transition: all 0.3s;
+                    color: $color-white;
+                }
+                &:hover {
+                    // background: linear-gradient(135deg, darken(rgba(40,110,190,1),5%) 0%,darken(rgba(0,156,229,1), 5%) 100%);
+                    background: $color-blue;
+                    i {
+                        //color: $color-blue;
+                    }
+                }
+                &.btn-thank-police {
+                    padding-left: 3.6em;
+                    border-right: 1px solid darken($color-dark-blue, 5%);
+                } 
             }
         }
     }

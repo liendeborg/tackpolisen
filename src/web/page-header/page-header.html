@@ -7,8 +7,11 @@
 <nav>
     <a ui-sref="app.home" ng-class="{active: $ctrl.state == 'app.home'}">Tack Polisen!</a>
     <a ui-sref="app.support" ng-class="{active: $ctrl.state == 'app.support'}">Stöd oss</a>
-    <a ui-sref="app.nominate" ng-class="{active: $ctrl.state == 'app.nominate'}">Nominera&nbsp;<span class="hidden-sm hidden-xs">till TackPolisen-priset</span></a>
-    <a ui-sref="app.about" ng-class="{active: $ctrl.state == 'app.about'}">Om stiftelsen</a>
+    <a ui-sref="app.nominate" ng-class="{active: $ctrl.state == 'app.nominate'}">Nominera&nbsp;<span class="hidden-sm hidden-xs">till Guldrosen-priset</span></a>
+    <a ui-sref="app.about" ng-class="{active: $ctrl.state == 'app.about'}">Stiftelsen</a>
     <a ui-sref="app.press" ng-class="{active: $ctrl.state == 'app.press'}">Press</a>
 </nav>
-<a ng-click="" class="btn btn-lg btn-blue btn-thank-police">Säg tack till polisen!</a>
+<a ng-click="" class="btn btn-lg btn-blue btn-thank-police">
+    <i class="fa fa-bullhorn" aria-hidden="true"></i> 
+    Säg tack till polisen!
+</a>
