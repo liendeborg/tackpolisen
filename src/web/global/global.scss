@@ -132,6 +132,7 @@ page-header {
             color: $color-dark-blue;
             font-size: 3.5em;
             transform: rotate(-2deg);
+            letter-spacing: -1px;
 
             // SVG Icon
             background-image: url("/src/assets/images/stroke2-white.svg");
@@ -142,20 +143,24 @@ page-header {
             transition: all 0.3s;
 
             &:hover {
-                color: $color-blue;
+                //color: $color-blue;
                 cursor: pointer;
             }
             @media screen and (min-width: $page-width-xs) {
-                font-size: 5em;
+                font-size: 6em;
+                letter-spacing: -2px;
             }
             @media screen and (min-width: $page-width-sm) {
                 font-size: 7.5em;
+                letter-spacing: -3px;
             }
             @media screen and (min-width: $page-width-md) {
-                font-size: 8.5em;
+                font-size: 9.5em;
+                letter-spacing: -4px;
             }
             @media screen and (min-width: $page-width-lg) {
-                font-size: 9em;
+                font-size: 10em;
+                letter-spacing: -5px;
                 margin-top: 1.5em;
             }
         }
