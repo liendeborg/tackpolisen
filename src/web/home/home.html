@@ -26,14 +26,28 @@
               <p>Använd hashtaggen <b>#TackPolisen</b> och sprid positiva inlägg när polisen gör ett bra jobb. Gott uppförande ska uppmuntras!</p>
               <p>Stöd initiativet genom att skriva upp dig på listan, donera valfritt belopp som går till att belöna beundransvärda poliser eller dela med dina vänner.</p>
               <p>Tack polisen för att ni finns!</p>
-              <div>
-                  <div class="pull-left profile-picture"></div>
-                  <div class="pull-left">
-                    <b>Robin Liendeborg</b><br>
-                    Grundare #TackPolisen <br>
-                    Social Entreprenör & Samhällsaktivist
-                  </div>
-              </div>
+              <author-section>
+                  <author>
+                    <author-image class="profile-picture robin">
+
+                    </author-image>
+                    <author-details>
+                      <author-name>Robin Liendeborg</author-name>
+                      <author-job-title>Grundare och ordförande i <b>#TackPolisen</b></author-job-title>
+                      <author-description>Robin är en Social Entreprenör och samhällsaktivist baserad i Linköping. Till vardags arbetar han med UX design och tjänstedesign.</author-description>
+                    </author-details>
+                  </author>
+                  <author>
+                    <author-image class="profile-picture oskar">
+
+                    </author-image>
+                    <author-details>
+                      <author-name>Oskar Eriksson</author-name>
+                      <author-job-title>Medgrundare och styrelsemedlem i <b>#TackPolisen</b></author-job-title>
+                      <author-description>Oskar är en Software Engineer på Infor och samhällsaktivist baserad i Linköping.</author-description>
+                    </author-details>
+                  </author>
+              </author-section>
               <intro-overlay></intro-overlay>
           </intro-section>
           <button class="btn btn-lg btn-blue" ng-hide="$ctrl.introSectionIsOpen" ng-click="$ctrl.toggleIntroSection()">Läs ändamålsförklaringen</button>
@@ -55,16 +69,32 @@
           </card-box>
         </sidebar>
       </article>
+    </page-content>
+
+    <page-content>
       <article>
-        <h2>Du kan dela dina inlägg på följande vis:</h2>
-        
-        <div>
-          <div>Info här</div>
-          <div>Info här</div>
-          <div>Info här</div>
-        </div>
+        <section>
+          <h1>Hur säger jag tack?</h1>
+          <get-started>
+            <div>
+              <h2>1. Registrera konto</h2>
+              <p>För att dela dina inlägg behöver du registrera dig via Facebook, Twitter eller Instagram.</p>
+            </div>
+            <div>
+              <h2>2. Skriv ett tacktal</h2>
+              <p>Skriv ett inlägg med hashtaggen <b>#tackpolisen</b> och uttryck din tacksamhet till polisen på sociala medier.</p>
+              <p>Svårt att komma på vad du ska säga? Ta ett foto och skriv om något som nyligen hänt. Ett enkelt tack räcker väldigt långt. Du kan berätta om en gammal händelse i livet där polisens insats gjorde dig tacksam.</p>
+            </div>
+            <div>
+              <h2>3. Inlägget publiceras</h2>
+              <p>Vårt system hämtar inlägg från sociala medier ett par gånger om dygnet. Vi granskar samtliga inlägg manuellt och publicerar bara de som följer vår <a href="">policy</a> för att förhindra näthat.</p>
+              <p>Du får ett epostmeddelande när inlägget publicerats på TackPolisen.se. Normalt sett publiceras inlägg inom 24h.</p>
+            </div>
+          </get-started>
+        </section>
       </article>
     </page-content>
+    
     <wall></wall>
   </page-container>
 </page-wrapper>

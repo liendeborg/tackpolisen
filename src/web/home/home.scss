@@ -13,6 +13,29 @@ home {
         position: relative;
         width: 100%;
     }
+    get-started {
+        display: flex;
+        flex-direction: row;
+        div {
+            width: 100%;
+            display: block;
+            padding: 0em 1.5em 0em 0em;
+
+            &:last-child {
+                padding-right: 0em;
+            }
+        }
+        h2 {
+            font-size: 1.8em;
+            height: 2em;
+        }
+        p {
+            font-size: 1.3em;
+        }
+        b {
+            color: $color-blue;
+        }
+    }
 
     video-section {
         display: block;
@@ -172,6 +195,15 @@ home {
         border-radius: 400px;
         background: #cccccc url("/src/assets/images/robinliendeborg.jpg") no-repeat center center;
         background-size: cover;
+
+        &.robin {
+            background: #cccccc url("/src/assets/images/robinliendeborg.jpg") no-repeat center center;
+            background-size: cover;
+        }
+        &.oskar {
+            background: #cccccc url("/src/assets/images/oskareriksson.jpeg") no-repeat center center;
+            background-size: cover;
+        }
     }
 
     card-box {
@@ -210,6 +242,60 @@ home {
         padding-bottom: 3px;
     }
 
+    author-section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        author-image,
+        author-details {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            flex-shrink: 1;            
+        }
+        author-image {
+            width: auto;
+            border: 0.1em solid lighten($color-gray, 30%);
+        }
+        author-details {
+            width: 100%;
+        }
+        author {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            margin-bottom: 2em;
+            
+            author-name {
+                display: block;
+                color: $color-black;
+                font-size: 1.6em;
+            }
+            author-job-title {
+                display: block;
+                color: $color-gray;
+                font-weight: bold;
+                font-size: 1.2em;
+                line-height: 1.5em;
+                padding-bottom: 0.5em;
+            }
+            author-description {
+                display: block;
+                color: $color-gray;
+                font-size: 1.2em;
+                line-height: 1.5em;
+            }
+        }
+        @media screen and (min-width: $page-width-lg) {
+            flex-direction: row;
+            author {
+                padding-bottom: 2em;
+                margin-right: 1em;
+            }
+        }
+    }
+
     @media screen and (min-width: $page-width-xs) {
         section {
             padding: 2em 4em 8em 4em;
@@ -219,33 +305,38 @@ home {
         }
     }
     // Special media query for sidebar
-    @media screen and (min-width: 1000px) {
-        section {
-            max-width: 630px;
+    @media screen and (min-width: 998px) {
+        intro-section {
+            width: calc(100% - 360px);
+            max-width: 820px;
         }
         sidebar {
             position: absolute;
             top: -20.45em;
             right: 1.5em;
             width: 25%;
-            width: 280px;
+            width: 300px;
         }
         card-box {
+            display: block;
             border-radius: 3px;
             margin-bottom: 3em;
             padding: 0.5em 1.5em;
             min-height: 20em;
+            width: 100%;
         }
     }
     @media screen and (min-width: $page-width-lg) {
-        section {
-            max-width: calc(100% - 400px);
+        intro-section {
+            width: calc(100% - 460px);
+            max-width: 820px;
         }
         sidebar {
             position: absolute;
             top: -20.45em;
             right: 1.5em;
-            width: 320px;
+            width: 400px;
+            //width: 320px;
         }
         video-section,
         video {
