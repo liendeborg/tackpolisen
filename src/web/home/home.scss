@@ -24,6 +24,15 @@ home {
             &:last-child {
                 padding-right: 0em;
             }
+            button-group {
+                display: block;
+                width: 100%;
+                button {
+                    display: block;
+                    width: 100%;
+                    border-radius: 0px;
+                }
+            }
         }
         h2 {
             font-size: 1.8em;
