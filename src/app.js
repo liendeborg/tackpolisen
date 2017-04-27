@@ -14,7 +14,8 @@ angular.module('app.tackpolisen', [
     'chart.js',
     'angular-loading-bar',
     require('./api/api.js'),
-    require('./web/web.js')
+    require('./web/web.js'),
+    require('satellizer')
 ]);
 
 // Style and fonts
@@ -25,3 +26,4 @@ require('notosans-fontface/css/notosans-fontface.css');
 // Routing
 //require('./app-config.js');
 require('./app-routes.js');
+require('./controller.js');

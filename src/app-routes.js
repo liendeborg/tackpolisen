@@ -3,8 +3,8 @@ var appTemplate = require('./app.html');
 angular.module('app.tackpolisen')
   .config(AppRouter);
 
-AppRouter.$inject = [ '$stateProvider', '$urlRouterProvider' ];
-function AppRouter($stateProvider, $urlRouterProvider) {
+AppRouter.$inject = [ '$stateProvider', '$urlRouterProvider', '$authProvider' ];
+function AppRouter($stateProvider, $urlRouterProvider, $authProvider) {
 
   $urlRouterProvider.otherwise('/home');
   $stateProvider
@@ -77,4 +77,10 @@ function AppRouter($stateProvider, $urlRouterProvider) {
         }
       }
     });
+
+    $authProvider.facebook({
+      clientId: '995896113844119',
+      redirectUri: 'http://localhost:9703',
+    });
+
 }
