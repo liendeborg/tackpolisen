@@ -207,7 +207,7 @@ page-footer {
         p {
             font-size: 2em;
             line-height: 1.6em;
-            margin: 0px;   
+            margin: 0px;
         }
     }
     @media screen and (min-width: $page-width-lg) {
@@ -216,11 +216,6 @@ page-footer {
             section.counter {
                 padding-top: 6em;
             }
-        }
-       p {
-            font-size: 2.4em;
-            line-height: 1.6em;
-            margin: 0px;   
         }
     }
 }

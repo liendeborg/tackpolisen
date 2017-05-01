@@ -1,22 +1,19 @@
-<div ng-controller="LoginCtrl">
-  <logo>
-    <h1 class="page-title" ui-sref="app.home">
-      <!-- <img src="/src/assets/images/tackpolisen-logo.svg"> -->#TackPolisen
-    </h1>
-    <h2 class="page-slogan">
-      <div>En folkrörelse som hyllar beundransvärda poliser via <span>#tackpolisen</span>.</div>
-      <div>Varje år delar vi ut <a ui-sref="app.nominate">Guldrosen-priset</a> för att visa uppskattning till poliskåren.</div>
-    </h2>
-  </logo>
-  <a ng-click="authenticate('facebook')" class="btn btn-lg btn-blue btn-thank-police">
-    <i class="fa fa-bullhorn" aria-hidden="true"></i>
-    Säg tack till polisen!
-  </a>
-  <nav>
-    <a ui-sref="app.home" ng-class="{active: $ctrl.state == 'app.home'}">Upptäck</a>
-    <a ui-sref="app.support" ng-class="{active: $ctrl.state == 'app.support'}">Stöd oss</a>
-    <a ui-sref="app.nominate" ng-class="{active: $ctrl.state == 'app.nominate'}">Nominera&nbsp;<span class="hidden-sm hidden-xs">till Guldrosen-priset</span></a>
-    <a ui-sref="app.about" ng-class="{active: $ctrl.state == 'app.about'}">Stiftelsen</a>
-    <a ui-sref="app.press" ng-class="{active: $ctrl.state == 'app.press'}">Press</a>
-  </nav>
-</div>
+<logo>
+  <h1 class="page-title" ui-sref="app.home">
+    <!-- <img src="/src/assets/images/tackpolisen-logo.svg"> -->#TackPolisen
+  </h1>
+  <h2 class="page-slogan">
+    <div>En folkrörelse som hyllar beundransvärda poliser via <span>#tackpolisen</span>.</div>
+    <div>Varje år delar vi ut <a ui-sref="app.nominate">Guldrosen-priset</a> för att visa uppskattning till poliskåren.</div>
+  </h2>
+</logo>
+<a ng-click="" class="btn btn-lg btn-blue btn-thank-police">
+  Säg tack till polisen!
+</a>
+<nav>
+  <a ui-sref="app.home" ng-class="{active: $ctrl.state == 'app.home'}">Upptäck</a>
+  <a ui-sref="app.support" ng-class="{active: $ctrl.state == 'app.support'}">Stöd oss</a>
+  <a ui-sref="app.nominate" ng-class="{active: $ctrl.state == 'app.nominate'}">Nominera&nbsp;<span class="hidden-sm hidden-xs">till Guldrosen-priset</span></a>
+  <a ui-sref="app.about" ng-class="{active: $ctrl.state == 'app.about'}">Stiftelsen</a>
+  <a ui-sref="app.press" ng-class="{active: $ctrl.state == 'app.press'}">Press</a>
+</nav>

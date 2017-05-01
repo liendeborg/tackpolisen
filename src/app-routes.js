@@ -80,7 +80,9 @@ function AppRouter($stateProvider, $urlRouterProvider, $authProvider) {
 
     $authProvider.facebook({
       clientId: '995896113844119',
-      redirectUri: 'http://localhost:9703',
+      url: 'https://api.oskarer.se/v1/auth/facebook',
+      redirectUri: 'http://localhost:9703/',
+      scope: ['public_profile', 'email', 'user_posts'],
     });
 
 }
