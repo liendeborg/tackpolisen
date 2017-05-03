@@ -27,10 +27,57 @@ home {
             button-group {
                 display: block;
                 width: 100%;
-                button {
+                button.btn {
                     display: block;
                     width: 100%;
                     border-radius: 0px;
+                    padding: 1em 2em 1em 4em;
+                    text-align: center;
+                    color: $color-white;
+                    margin-bottom: 0.5em;
+                    border-radius: 0.2em !important;
+                    font-weight: bold;
+                    font-size: 1.2em;
+                    border: none;
+                    letter-spacing: 1px;
+                    position: relative;
+                    text-align: left;
+
+                    &:hover {
+                        color: $color-white;
+                    }
+                    &:active {
+                        color: $color-white;
+                    }
+                    &:focus {
+                        box-shadow: inset 0px 1px 3px rgba(0,0,0,0.3);
+                        outline: none;
+                        color: $color-white;
+                    }
+                    i {
+                        font-size: 1.5em;
+                        position: absolute;
+                        left: 1.5em;
+                    }
+
+                    &.btn-twitter {
+                        background: $color-twitter;
+                        &:hover {
+                            background: darken($color-twitter, 10%);
+                        }
+                    }
+                    &.btn-facebook {
+                        background: $color-facebook;
+                        &:hover {
+                            background: darken($color-facebook, 10%);
+                        }
+                    }
+                    &.btn-instagram {
+                        background: $color-instagram;
+                        &:hover {
+                            background: darken($color-instagram, 10%);
+                        }
+                    }
                 }
             }
         }
