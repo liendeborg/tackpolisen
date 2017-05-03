@@ -19,13 +19,14 @@ p {
 }
 
 .header-bg {
-    display: block;
-    width: 100%;
-    height: auto;
+    z-index: -1;
     position: fixed;
     top: 0px;
     left: 0px;
     right: 0px;
+    display: block;
+    width: 100%;
+    height: auto;
     opacity: 0.5;
     margin-top: 60px;
     @media screen and (min-width: $page-width-xs) {
@@ -115,6 +116,10 @@ page-hero {
         font-size: 4em;
     }
 }
+section {
+    padding: 4em;
+    margin-bottom: 3em;
+}
 
 article {
     max-width: $page-width-lg;
@@ -126,241 +131,6 @@ article {
     border-radius: 2px !important;
 }
 
-page-header {
-    display: block;
-    margin: 120px auto;
-    margin-bottom: 1em;
-
-    logo {
-        display: block;
-        margin: 0 auto;
-        text-align: center;
-        width: 100%;
-
-        h1.page-title {
-            width: 100%;
-            color: $color-dark-blue;
-            font-size: 3.5em;
-            transform: rotate(-2deg);
-            letter-spacing: -1px;
-            text-align: center;
-
-            // SVG Icon - white bg
-            background-image: url("/src/assets/images/stroke2-white.svg");
-            background-repeat: no-repeat;
-            background-position: center -155%;
-            background-size: auto 28%;
-            background-size: 100% 115%;
-            transition: all 0.3s;
-
-            img {
-                display: inline-block;
-                position: relative;
-                height: 160px;
-                top: -10px;
-                margin-right: 0.2em;
-            }
-
-            &:hover {
-                //color: $color-blue;
-                cursor: pointer;
-            }
-            @media screen and (min-width: $page-width-xs) {
-                font-size: 6em;
-                letter-spacing: -2px;
-                img {
-                    height: 80px;
-                    top: -10px;
-                    margin-right: 0.2em;
-                }
-            }
-            @media screen and (min-width: $page-width-sm) {
-                font-size: 7.5em;
-                letter-spacing: -3px;
-                img {
-                    height: 160px;
-                    top: -10px;
-                    margin-right: 0.2em;
-                }
-            }
-            @media screen and (min-width: $page-width-md) {
-                font-size: 9.5em;
-                letter-spacing: -4px;
-                img {
-                    height: 160px;
-                    top: -10px;
-                    margin-right: 0.2em;
-                }
-            }
-            @media screen and (min-width: $page-width-lg) {
-                font-size: 10em;
-                letter-spacing: -5px;
-                margin-top: 1.5em;
-                img {
-                    height: 160px;
-                    top: -10px;
-                    margin-right: 0.2em;
-                }
-            }
-        }
-        h2.page-slogan {
-            display: block;
-            height: auto;
-            color: $color-gray;
-            font-size: 1.3em;
-            line-height: 1.6em;
-            width: 100%;
-            padding: 0 1em;
-            margin: 2em auto;
-            
-            & > div {
-                display: inline;
-            }
-            a {
-                white-space: nowrap;
-            }
-
-            span {
-                display: inline;
-                padding: 1.3em 0.5em;
-                color: $color-blue;
-                font-weight: bold;
-                background-image: url("/src/assets/images/stroke2-white.svg");
-                background-repeat: no-repeat;
-                background-position: center 30%;
-                background-size: auto 28%;
-                background-size: 100% 150%;
-            }
-            @media screen and (min-width: $page-width-sm) {
-                margin-top: 2em;
-                margin-bottom: 0;
-                line-height: 1.6em;
-                font-size: 1.4em;
-                width: 100%;
-                & > div {
-                    display: block;
-                }
-            }
-            @media screen and (min-width: $page-width-md) {
-                font-size: 1.5em;
-            }
-            @media screen and (min-width: $page-width-lg) {
-                margin-top: 2.5em;
-                font-size: 1.9em;
-                line-height: 1.6em;
-            }
-        }
-    }
-    
-    nav {
-        display: none;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        margin: 0px;
-        margin-top: 8em;
-
-        @media screen and (min-width: $page-width-xs) {
-            display: flex;
-        }
-
-        a {
-            display: flex;
-            flex-grow: 1;
-            position: relative;
-            bottom: 0px;
-            box-shadow: 0px 1px 3px rgba(0,0,0,0.12);
-
-            padding: 0.7em 1em;
-            font-size: 1.2em;
-            color: $color-gray;
-            border: 0.1em solid #fff;
-            transition: all 0.2s;
-            //border-radius: 5px;
-            border-radius: 0;
-            text-decoration: none;
-            cursor: pointer;
-            background: #fff;
-            margin: 0 0.1em;
-            margin-bottom: 0px;
-
-            &:hover {
-                border: 0.1em solid $color-blue;
-                color: $color-blue;
-                background: $color-blue;
-                color: $color-white;
-                text-decoration: none;
-            }
-            &:focus,
-            &:active {
-                text-decoration: none;
-            }
-            &.active,
-            &.active:hover {
-                border: 0.1em solid $color-dark-blue;
-                background: $color-dark-blue;
-                color: $color-white;
-
-                &:hover {
-                    background: $color-dark-blue;
-                }
-            }
-            @media screen and (min-width: $page-width-sm) {
-                &:first-child {
-                    border-top-left-radius: 5px;
-                    border-bottom-left-radius: 5px; 
-                }
-                &:last-child {
-                    border-top-right-radius: 5px;
-                    border-bottom-right-radius: 5px;
-                }
-            }
-            @media screen and (min-width: $page-width-md) {
-                padding: 0.7em 1em;
-                font-size: 1.3em;
-            }
-            @media screen and (min-width: $page-width-lg) {
-                padding: 1em 1em;
-                font-size: 1.4em;
-            }
-        }
-    }
-    .btn-thank-police {
-        display: block;
-        position: relative;
-        font-size: 1.4em;
-        padding: 0.8em 1em;
-        margin: 1em;
-        transition: all 0.3s;
-
-        background: $color-dark-blue !important;
-        border-color: $color-dark-blue !important;
-
-        &:hover {
-            background: $color-blue !important;
-            border-color: $color-blue !important;
-        }
-
-        @media screen and (min-width: $page-width-xs) {
-            /*position: absolute;
-            top: 0.5em;
-            right: 0.5em;*/
-            max-width: 360px;
-            margin: 2em auto;
-            padding: 0.8em 1em !important;
-            border-radius: 0px;
-            padding: 1.2em 1.8em;
-            border-radius: 10em !important;
-        }
-       @media screen and (min-width: $page-width-sm) {
-            //font-size: 1.5em;
-            padding: 1em 1em !important;
-        }
-       @media screen and (min-width: $page-width-lg) {
-           font-size: 1.6em;
-            padding: 1.2em 1em !important;
-        }
-    }
-}
 .btn.btn-blue {
     border: 0.1em solid $color-blue;
     color: $color-white;

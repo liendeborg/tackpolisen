@@ -6,13 +6,13 @@ angular.module('app.tackpolisen')
 AppRouter.$inject = [ '$stateProvider', '$urlRouterProvider', '$authProvider' ];
 function AppRouter($stateProvider, $urlRouterProvider, $authProvider) {
 
-  $urlRouterProvider.otherwise('/home');
+  $urlRouterProvider.otherwise('/');
   $stateProvider
+    // .state('app', {
+    //   abstract: true,
+    // })
     .state('app', {
-      abstract: true,
-    })
-    .state('app.home', {
-      url: '/home',
+      url: '/',
       views: {
         'topnav@': {
           template: '<topnav></topnav>',
@@ -22,8 +22,30 @@ function AppRouter($stateProvider, $urlRouterProvider, $authProvider) {
         }
       }
     })
+    .state('app.user', {
+      url: 'user',
+      views: {
+        'topnav@': {
+          template: '<topnav></topnav>',
+        },
+        'main@': {
+          template: '<user></user>',
+        }
+      }
+    })
+    .state('app.explore', {
+      url: 'explore',
+      views: {
+        'topnav@': {
+          template: '<topnav></topnav>',
+        },
+        'main@': {
+          template: '<explore></explore>',
+        }
+      }
+    })
     .state('app.about', {
-      url: '/about',
+      url: 'about',
       views: {
         'topnav@': {
           template: '<topnav></topnav>',
@@ -34,7 +56,7 @@ function AppRouter($stateProvider, $urlRouterProvider, $authProvider) {
       }
     })
     .state('app.nominate', {
-      url: '/nominate',
+      url: 'nominate',
       views: {
         'topnav@': {
           template: '<topnav></topnav>',
@@ -45,7 +67,7 @@ function AppRouter($stateProvider, $urlRouterProvider, $authProvider) {
       }
     })
     .state('app.donate', {
-      url: '/donate',
+      url: 'donate',
       views: {
         'topnav@': {
           template: '<topnav></topnav>',
@@ -56,7 +78,7 @@ function AppRouter($stateProvider, $urlRouterProvider, $authProvider) {
       }
     })
     .state('app.support', {
-      url: '/support',
+      url: 'support',
       views: {
         'topnav@': {
           template: '<topnav></topnav>',
@@ -67,7 +89,7 @@ function AppRouter($stateProvider, $urlRouterProvider, $authProvider) {
       }
     })
     .state('app.press', {
-      url: '/press',
+      url: 'press',
       views: {
         'topnav@': {
           template: '<topnav></topnav>',

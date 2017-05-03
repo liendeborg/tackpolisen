@@ -1,23 +1,28 @@
-<logo ui-sref="app.home">
+<logo ui-sref="app">
     <img src="/src/assets/images/tackpolisen-logo.svg">
     <span>TackPolisen</span>
 </logo>
+<div class="stretcher"></div>
 <nav ng-controller="LoginCtrl">
-    <div></div>
-    <a ui-sref="app.home" ng-class="{active: $ctrl.state == 'app.home'}">Utforska</a>
+    <a ui-sref="app.explore" ng-class="{active: $ctrl.state == 'app.explore'}">Upptäck</a>
     <a ui-sref="app.support" ng-class="{active: $ctrl.state == 'app.support'}">Stöd oss</a>
     <a ui-sref="app.nominate" ng-class="{active: $ctrl.state == 'app.nominate'}">Nominera</a>
     <a ui-sref="app.about" ng-class="{active: $ctrl.state == 'app.about'}">Stiftelsen</a>
     <a ui-sref="app.press" ng-class="{active: $ctrl.state == 'app.press'}">Press</a>
-    <div></div>
-
+</nav>
+<div class="stretcher"></div>
+<call-to-action>
+    <a ui-sref="app.login" class="btn-login">
+        Logga in
+    </a>
     <a ng-click="authenticate('facebook')" ui-sref="app.thankyou" class="btn-thank-police">
         Säg tack<span class="hidden-xs hidden-sm hidden-md"></span>
         <span class="circle">
             <i class="fa fa-bullhorn" aria-hidden="true"></i>
         </span>
     </a>
-    <a ui-sref="app.login" class="btn-login">
-        Logga in
+    <a ui-sref="app.user" class="btn-user">
+        <img src="/src/assets/images/tackpolisen-roses5-compressed.jpg">
+        <span>Robin</span>
     </a>
-</nav>
+</call-to-action>

@@ -13,6 +13,8 @@ require('./modal-checklist-item/modal-checklist-item.js');
 require('./modal-comment/modal-comment.js');
 require('./modal-history/modal-history.js');
 
+require('./user/user.js');
+require('./explore/explore.js');
 require('./support-us/support-us.js');
 require('./nominate/nominate.js');
 require('./donate/donate.js');
