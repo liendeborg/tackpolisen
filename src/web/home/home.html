@@ -26,28 +26,7 @@
               <p>Använd hashtaggen <b>#TackPolisen</b> och sprid positiva inlägg när polisen gör ett bra jobb. Gott uppförande ska uppmuntras!</p>
               <p>Stöd initiativet genom att skriva upp dig på listan, donera valfritt belopp som går till att belöna beundransvärda poliser eller dela med dina vänner.</p>
               <p>Tack polisen för att ni finns!</p>
-              <author-section>
-                  <author>
-                    <author-image class="profile-picture robin">
-
-                    </author-image>
-                    <author-details>
-                      <author-name>Robin Liendeborg</author-name>
-                      <author-job-title>Grundare och ordförande i <b>#TackPolisen</b></author-job-title>
-                      <author-description>Robin är en Social Entreprenör och samhällsaktivist baserad i Linköping. Till vardags arbetar han med UX design och tjänstedesign.</author-description>
-                    </author-details>
-                  </author>
-                  <author>
-                    <author-image class="profile-picture oskar">
-
-                    </author-image>
-                    <author-details>
-                      <author-name>Oskar Eriksson</author-name>
-                      <author-job-title>Medgrundare och styrelsemedlem i <b>#TackPolisen</b></author-job-title>
-                      <author-description>Oskar är en Software Engineer på Infor och samhällsaktivist baserad i Linköping.</author-description>
-                    </author-details>
-                  </author>
-              </author-section>
+              <author-section authors="$ctrl.authors"></author-section>
               <intro-overlay></intro-overlay>
           </intro-section>
           <button class="btn btn-lg btn-blue" ng-hide="$ctrl.introSectionIsOpen" ng-click="$ctrl.toggleIntroSection()">Läs ändamålsförklaringen</button>

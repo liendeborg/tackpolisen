@@ -24,3 +24,4 @@ require('./page-header/page-header.js');
 require('./page-footer/page-footer.js');
 require('./topnav/topnav.js');
 require('./wall/wall.js');
+require('./author-section/author-section.js');

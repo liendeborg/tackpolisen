@@ -1,0 +1,8 @@
+<author ng-repeat="author in $ctrl.authors">
+    <author-image class="profile-picture robin" ng-class="author.imageClass"></author-image>
+    <author-details>
+        <author-name>{{ author.name }}</author-name>
+        <author-job-title ng-bind-html="author.jobTitle"></author-job-title>
+        <author-description>{{ author.description }}</author-description>
+    </author-details>
+</author>

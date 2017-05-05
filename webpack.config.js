@@ -1,8 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 
-var DEV_API = "https://api.oskarer.se/v1/tweets";
-var TWITTER_API = "https://api.oskarer.se/v1/tweets";
+var DEV_API = "https://api.oskarer.se/v1";
 
 module.exports = {
     headers: { 

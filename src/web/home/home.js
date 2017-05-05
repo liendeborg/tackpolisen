@@ -19,6 +19,14 @@ angular.module('app.tackpolisen.web')
 
         vm.$onInit = function () {
             vm.introSectionIsOpen = false;
+            vm.authors = [
+                {
+                    name: 'Robin Liendeborg',
+                    jobTitle: 'Grundare och ordförande i <b>#TackPolisen</b>',
+                    description: 'Robin är en Social Entreprenör och samhällsaktivist baserad i Linköping. Till vardags arbetar han med UX design och tjänstedesign.',
+                    imageClass: 'robin'
+                }
+            ];
 
             // number counter
             // $('.count').each(function () {
@@ -36,6 +44,5 @@ angular.module('app.tackpolisen.web')
 
         vm.toggleIntroSection = function() {
             vm.introSectionIsOpen = !vm.introSectionIsOpen;
-            console.log(vm.introSectionIsOpen);
         }
     }

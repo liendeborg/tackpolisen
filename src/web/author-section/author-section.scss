@@ -1,0 +1,109 @@
+@import '../../sass/modules/variables.scss';
+
+author-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    author-image,
+    author-details {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        flex-shrink: 1;            
+    }
+    author-image {
+        width: auto;
+        border: 0.1em solid lighten($color-gray, 30%);
+    }
+    author-details {
+        width: 100%;
+    }
+    author {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-bottom: 2em;
+        
+        author-name {
+            display: block;
+            color: $color-black;
+            font-size: 1.6em;
+        }
+        author-job-title {
+            display: block;
+            color: $color-gray;
+            font-weight: bold;
+            font-size: 1.2em;
+            line-height: 1.5em;
+            padding-bottom: 0.5em;
+        }
+        author-description {
+            display: block;
+            color: $color-gray;
+            font-size: 1.2em;
+            line-height: 1.5em;
+        }
+        b {
+            color: $color-blue;
+        }
+    }
+    .profile-picture {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        margin-right: 20px;
+        border-radius: 400px;
+        background: #cccccc url("/src/assets/images/robinliendeborg.jpg") no-repeat center center;
+        background-size: cover;
+
+        &.robin {
+            background: #cccccc url("/src/assets/images/robinliendeborg.jpg") no-repeat center center;
+            background-size: cover;
+        }
+        &.oskar {
+            background: #cccccc url("/src/assets/images/oskareriksson.jpeg") no-repeat center center;
+            background-size: cover;
+        }
+        &.polisen {
+            background: #cccccc url("/src/assets/images/default.jpg") no-repeat center center;
+            background-size: cover;
+        }
+        &.ekonomen {
+            background: #cccccc url("/src/assets/images/default.jpg") no-repeat center center;
+            background-size: cover;
+        }
+        &.experten {
+            background: #cccccc url("/src/assets/images/default.jpg") no-repeat center center;
+            background-size: cover;
+        }
+    }
+
+    @media screen and (min-width: $page-width-md) {
+        &.full-width {
+            flex-direction: row;
+            flex-wrap: wrap;
+            
+            author {
+                width: 50%;
+                flex-shrink: 1;
+                flex-grow: 2;
+                padding-bottom: 2em;
+                padding-right: 2em;
+            }
+        }
+    }
+
+    @media screen and (min-width: $page-width-lg) {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        author {
+            width: 50%;
+            flex-shrink: 1;
+            flex-grow: 2;
+            padding-bottom: 2em;
+            padding-right: 2em;
+        }
+    }
+}

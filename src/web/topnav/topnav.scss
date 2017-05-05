@@ -89,18 +89,16 @@ topnav {
                 width: auto;
                 padding: 0.6em 1em;
                 margin: 1.2em 1em 1.1em 0em;
-                background: $color-orange;
+                background: $color-dark-blue;
                 color: $color-white;
                 border-radius: 100em;
 
-                background: linear-gradient(135deg, rgba(255,175,75,1) 0%,rgba(255,146,10,1) 100%);
-
-                // background: url(/src/assets/images/gold-bg.svg);
+                //background: linear-gradient(135deg, rgba(255,175,75,1) 0%,rgba(255,146,10,1) 100%);
+                //background: url(/src/assets/images/gold-bg.svg);
                 
                 &:hover {
-                    background: $color-dark-blue;
-
-                    background: linear-gradient(135deg, darken(rgba(255,175,75,1), 10%) 0%,darken(rgba(255,146,10,1), 10%) 100%);
+                    background: $color-blue;
+                  //  background: linear-gradient(135deg, darken(rgba(255,175,75,1), 10%) 0%,darken(rgba(255,146,10,1), 10%) 100%);
                 }
             }
             &.btn-login {

@@ -10,9 +10,21 @@ angular.module('app.tackpolisen.web')
         }
     });
     
-    //TopnavController.$inject = [];
-    
-    function WallController() {
+    WallController.$inject = ['Posts'];
+    function WallController(Posts) {
         const vm = this;
-        vm.tackpolisen = "#TackPolisen";
+        vm.posts = [];
+
+        vm.$onInit = function() {
+
+            Posts.getAll()
+            .then((data) => {
+                vm.posts = data;
+                console.log("Fetched all posts");
+            })
+            .catch((data) => {
+                console.log("Couldn't fetch any posts");
+            })
+
+        }
     }

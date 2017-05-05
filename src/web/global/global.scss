@@ -15,11 +15,30 @@ body {
 }
 
 * {
-    user-select: none;
+    //user-select: none;
 }
 
 p {
     font-size: 1.6em;
+    color: $color-black;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $color-dark-blue;
+}
+section {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $color-dark-blue;
+    }
 }
 
 .header-bg {
