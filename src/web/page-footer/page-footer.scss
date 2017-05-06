@@ -16,6 +16,10 @@ page-footer {
             flex-shrink: 1;
             width: 100%;
             padding-bottom: 0px;
+
+            p {
+                color: $color-gray;
+            }
         }
         section.description {
             order: 2;

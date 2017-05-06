@@ -207,6 +207,10 @@ home {
         overflow: hidden;
         max-width: 800px;
 
+        p {
+            color:  $color-gray;
+        }
+
         &.collapsed {
             height: 450px;
         }
