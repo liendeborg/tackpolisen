@@ -1,5 +1,5 @@
-<article class="card-facebook" ng-if="$ctrl.content.type === 'facebook'"  ng-class="$ctrl.content.images.length === 0 ? 'quote' : ''">
-    <card-media ng-if="$ctrl.content.images.length > 0">
+<article class="card-facebook" ng-if="$ctrl.content.type === 'facebook'"  ng-class="$ctrl.content.images.length === 0 ? 'quote' : ''" id="{{ 'card' + $ctrl.content.id }}">
+    <card-media ng-if="$ctrl.content.images.length > 0" ng-repeat="media in $ctrl.content.images">
         <figure>
             <img src="{{ $ctrl.content.images[0].url }}" alt="The Pulpit Rock">
             <figcaption>{{ $ctrl.content.text }}</figcaption>
@@ -20,7 +20,7 @@
 
 
 <article class="card-twitter" ng-if="$ctrl.content.type === 'twitter'" ng-class="$ctrl.content.images.length === 0 ? 'quote' : ''">
-    <card-media ng-if="$ctrl.content.images.length > 0">
+    <card-media ng-if="$ctrl.content.images.length > 0" ng-repeat="media in $ctrl.content.images">
         <figure>
             <img src="{{ $ctrl.content.images[0].url }}" alt="The Pulpit Rock">
             <figcaption>{{ $ctrl.content.text }}</figcaption>
@@ -41,7 +41,7 @@
 
 
 <article class="card-instagram" ng-if="$ctrl.content.type === 'instagram'" ng-class="$ctrl.content.images.length === 0 ? 'quote' : ''">
-    <card-media ng-if="$ctrl.content.images.length > 0">
+    <card-media ng-if="$ctrl.content.images.length > 0" ng-repeat="media in $ctrl.content.images">
         <figure>
             <img src="{{ $ctrl.content.images[0].url }}" alt="The Pulpit Rock">
             <figcaption>{{ $ctrl.content.text }}</figcaption>

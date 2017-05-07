@@ -31,7 +31,23 @@
     </call-to-action>
 </primary-menu>
 <secondary-menu>
-    <breadcrumbs>
+    <breadcrumbs ng-show="$ctrl.state == 'app.support'">
+        <a ui-sref="#1" ng-class="{active: $ctrl.state == 'app.explore'}">Ändamål</a>
+        <a ui-sref="#2" ng-class="{active: $ctrl.state == 'app.support'}">Bakgrund</a>
+        <a ui-sref="#3" ng-class="{active: $ctrl.state == 'app.nominate'}">Värdegrund</a>
+        <a ui-sref="#4" ng-class="{active: $ctrl.state == 'app.about'}">Styrelsen</a>
+        <a ui-sref="#5" ng-class="{active: $ctrl.state == 'app.press'}">Stadgar</a>
+        <a ui-sref="#5" ng-class="{active: $ctrl.state == 'app.press'}">Mötesprotokoll</a>
+    </breadcrumbs>
+    <breadcrumbs ng-show="$ctrl.state == 'app.nominate'">
+        <a ui-sref="#1" ng-class="{active: $ctrl.state == 'app.explore'}">Ändamål</a>
+        <a ui-sref="#2" ng-class="{active: $ctrl.state == 'app.support'}">Bakgrund</a>
+        <a ui-sref="#3" ng-class="{active: $ctrl.state == 'app.nominate'}">Värdegrund</a>
+        <a ui-sref="#4" ng-class="{active: $ctrl.state == 'app.about'}">Styrelsen</a>
+        <a ui-sref="#5" ng-class="{active: $ctrl.state == 'app.press'}">Stadgar</a>
+        <a ui-sref="#5" ng-class="{active: $ctrl.state == 'app.press'}">Mötesprotokoll</a>
+    </breadcrumbs>
+    <breadcrumbs ng-show="$ctrl.state == 'app.about'">
         <a ui-sref="#1" ng-class="{active: $ctrl.state == 'app.explore'}">Ändamål</a>
         <a ui-sref="#2" ng-class="{active: $ctrl.state == 'app.support'}">Bakgrund</a>
         <a ui-sref="#3" ng-class="{active: $ctrl.state == 'app.nominate'}">Värdegrund</a>
