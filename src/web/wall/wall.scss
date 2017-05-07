@@ -44,6 +44,26 @@ card {
         
     }
 
+    // If card has no media attached
+    article.quote {
+        card-content {
+            background: $color-blue;
+            color: $color-dark-blue;
+
+            post {
+                border-bottom: 1px solid lighten($color-dark-blue, 5%);
+                text-align: center;
+            }
+            a {
+                color: $color-white;
+            }
+        }
+        button.btn-card {
+            background: $color-blue;
+            color: $color-white;
+        }
+    }
+
     card-media {
         display: block;
         figure {

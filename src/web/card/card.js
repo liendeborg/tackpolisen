@@ -6,11 +6,29 @@ angular.module('app.tackpolisen.web')
         templateUrl: template,
         controller: CardController,
         bindings: {
-            'value': '='
+            'content': '='
         }
     });
     
+    CardController.$inject = [];    
     function CardController() {
         const vm = this;
-        vm.tackpolisen = "#TackPolisen";
+
+        vm.$onInit = function () {
+
+
+        };
+
+        vm.getFacebookLink = function( handle ) {
+            var profile = handle.replace(/[@]/g, ""); 
+            return 'https://www.facebook.com/'+profile;
+        }
+        vm.getTwitterLink = function( handle ) {
+            var profile = handle.replace(/[@]/g, "");
+            return 'https://twitter.com/'+profile;
+        }
+        vm.getInstagramLink = function( handle ) {
+            var profile = handle.replace(/[@]/g, "");
+            return 'https://www.instagram.com/'+profile;
+        }
     }

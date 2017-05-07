@@ -1,20 +1,58 @@
-<article class="card-twitter">
-    <card-media>
+<article class="card-facebook" ng-if="$ctrl.content.type === 'facebook'"  ng-class="$ctrl.content.images.length === 0 ? 'quote' : ''">
+    <card-media ng-if="$ctrl.content.images.length > 0">
         <figure>
-            <img src="/src/assets/images/polisbild.jpeg" alt="The Pulpit Rock">
-            <figcaption>Fig1. - A view of the pulpit rock in Norway.</figcaption>
+            <img src="{{ $ctrl.content.images[0].url }}" alt="The Pulpit Rock">
+            <figcaption>{{ $ctrl.content.text }}</figcaption>
         </figure>
     </card-media>
     <card-content>
         <post-details>
-            <i class="fa fa-bullhorn" aria-hidden="true"></i> <a href="">@aliabdelzadeh</a> via twitter den 7 april 2017:
-            <div class="hide">
-                <a href="">@aliabdelzadeh</a> via instagram den 7 april:
-                <a href="">@aliabdelzadeh</a> via tackpolisen.se den 7 april:
-            </div>
+            <a href="{{ $ctrl.getFacebookLink($ctrl.content.handle) }}">{{ $ctrl.content.name }}</a> via facebook den 7 april 2017:
         </post-details>
         <post>
-            Very proud and impressed of the #Swedish Police. Det här är en längre text för att vi ska kunna se vad som fungerar och inte fungerar liksom... tjohejsan! <hashtag>#tackpolisen</hashtag>
+            {{ $ctrl.content.text }}
+        </post>
+    </card-content>
+    <card-toolbar>
+        <button type="button" class="btn-card"><i class="fa fa-share" aria-hidden="true"></i> Dela inlägg</button>
+    </card-toolbar>
+</article>
+
+
+<article class="card-twitter" ng-if="$ctrl.content.type === 'twitter'" ng-class="$ctrl.content.images.length === 0 ? 'quote' : ''">
+    <card-media ng-if="$ctrl.content.images.length > 0">
+        <figure>
+            <img src="{{ $ctrl.content.images[0].url }}" alt="The Pulpit Rock">
+            <figcaption>{{ $ctrl.content.text }}</figcaption>
+        </figure>
+    </card-media>
+    <card-content>
+        <post-details>
+            <a href="{{ $ctrl.getTwitterLink($ctrl.content.handle) }}">{{ $ctrl.content.handle }}</a> via twitter den 7 april 2017:
+        </post-details>
+        <post>
+            {{ $ctrl.content.text }}
+        </post>
+    </card-content>
+    <card-toolbar>
+        <button type="button" class="btn-card"><i class="fa fa-share" aria-hidden="true"></i> Dela inlägg</button>
+    </card-toolbar>
+</article>
+
+
+<article class="card-instagram" ng-if="$ctrl.content.type === 'instagram'" ng-class="$ctrl.content.images.length === 0 ? 'quote' : ''">
+    <card-media ng-if="$ctrl.content.images.length > 0">
+        <figure>
+            <img src="{{ $ctrl.content.images[0].url }}" alt="The Pulpit Rock">
+            <figcaption>{{ $ctrl.content.text }}</figcaption>
+        </figure>
+    </card-media>
+    <card-content>
+        <post-details>
+            <a href="{{ $ctrl.getInstagramLink($ctrl.content.handle) }}">{{ $ctrl.content.handle }}</a> via instagram den 7 april 2017:
+        </post-details>
+        <post>
+            {{ $ctrl.content.text }}
         </post>
     </card-content>
     <card-toolbar>

@@ -1,5 +1,6 @@
 <logo ui-sref="app">
-    <img src="/src/assets/images/tackpolisen-logo.svg">
+    <!-- <img src="/src/assets/images/tackpolisen-logo.svg"> -->
+    <img src="/src/assets/images/tackpolisen-logotyp2.svg">
     <span>TackPolisen</span>
 </logo>
 <div class="stretcher"></div>
@@ -12,17 +13,17 @@
 </nav>
 <div class="stretcher"></div>
 <call-to-action>
-    <a ui-sref="app.login" class="btn-login">
+    <a ui-sref="app.login" class="btn-login" ng-hide="$ctrl.loggedIn">
         Logga in
     </a>
-    <a ng-click="authenticate('facebook')" ui-sref="app.thankyou" class="btn-thank-police">
+    <a ng-click="authenticate('facebook')" ui-sref="app.thankyou" class="btn-thank-police" ng-show="$ctrl.loggedIn">
         Säg tack <span class="hidden-xs hidden-sm hidden-md">till polisen</span>
         <!-- <span class="circle hidden-xs hidden-sm hidden-md">
             <i class="fa fa-bullhorn" aria-hidden="true"></i>
         </span>
         -->
     </a>
-    <a ui-sref="app.user" class="btn-user">
+    <a ui-sref="app.user" class="btn-user" ng-show="$ctrl.loggedIn">
         <img src="/src/assets/images/default.jpg">
         <span>Robin</span>
     </a>

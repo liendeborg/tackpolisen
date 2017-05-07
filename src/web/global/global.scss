@@ -19,6 +19,11 @@ body {
     //user-select: none;
 }
 
+::selection {
+    color: $color-black; 
+    background: rgba($color-blue,0.15);
+}
+
 p {
     font-size: 1.6em;
     color: $color-black;

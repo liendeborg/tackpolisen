@@ -13,5 +13,6 @@ angular.module('app.tackpolisen.web')
     TopnavController.$inject = ['$state'];
     function TopnavController($state) {
         const vm = this;
+        vm.loggedIn = true;
         vm.state = $state.current.name;
     }
