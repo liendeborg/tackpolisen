@@ -2,6 +2,7 @@ require('angular');
 require('angular-ui-router');
 require('angular-ui-bootstrap');
 require('angular-sanitize');
+require('angular-animate');
 require('angular-drag-scroll');
 require('angular-chart.js');
 require('angular-loading-bar');
@@ -12,6 +13,7 @@ angular.module('app.tackpolisen', [
     'ui.bootstrap',
     'ui.bootstrap.modal',
     'ngSanitize',
+    'ngAnimate',
     'ng-drag-scroll',
     'chart.js',
     'angular-loading-bar',

@@ -12,7 +12,6 @@ body {
     //background-position: center -125%;
     //background-size: auto 28%;
     //background-size: 100% auto !important;
-
 }
 
 * {
@@ -47,6 +46,21 @@ section {
         margin-top: 2em;
         margin-bottom: 1em;
     }
+}
+
+
+a {
+    color: $color-dark-blue;
+    &:hover {
+        color: $color-blue;
+    }
+    &:active {
+        color: lighten($color-light-blue, 15%);
+    }
+}
+
+button {
+    user-select: none;
 }
 
 .header-bg {

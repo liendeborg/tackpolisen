@@ -1,30 +1,42 @@
-<logo ui-sref="app">
-    <!-- <img src="/src/assets/images/tackpolisen-logo.svg"> -->
-    <img src="/src/assets/images/tackpolisen-logotyp2.svg">
-    <span>TackPolisen</span>
-</logo>
-<div class="stretcher"></div>
-<nav ng-controller="LoginCtrl">
-    <a ui-sref="app.explore" ng-class="{active: $ctrl.state == 'app.explore'}">Upptäck</a>
-    <a ui-sref="app.support" ng-class="{active: $ctrl.state == 'app.support'}">Stöd oss</a>
-    <a ui-sref="app.nominate" ng-class="{active: $ctrl.state == 'app.nominate'}">Nominera</a>
-    <a ui-sref="app.about" ng-class="{active: $ctrl.state == 'app.about'}">Stiftelsen</a>
-    <a ui-sref="app.press" ng-class="{active: $ctrl.state == 'app.press'}">Press</a>
-</nav>
-<div class="stretcher"></div>
-<call-to-action>
-    <a ui-sref="app.login" class="btn-login" ng-hide="$ctrl.loggedIn">
-        Logga in
-    </a>
-    <a ng-click="authenticate('facebook')" ui-sref="app.thankyou" class="btn-thank-police" ng-show="$ctrl.loggedIn">
-        Säg tack <span class="hidden-xs hidden-sm hidden-md">till polisen</span>
-        <!-- <span class="circle hidden-xs hidden-sm hidden-md">
-            <i class="fa fa-bullhorn" aria-hidden="true"></i>
-        </span>
-        -->
-    </a>
-    <a ui-sref="app.user" class="btn-user" ng-show="$ctrl.loggedIn">
-        <img src="/src/assets/images/default.jpg">
-        <span>Robin</span>
-    </a>
-</call-to-action>
+<primary-menu>
+    <logo ui-sref="app">
+        <!-- <img src="/src/assets/images/tackpolisen-logo.svg"> -->
+        <img src="/src/assets/images/tackpolisen-logotyp2.svg">
+        <span>TackPolisen</span>
+    </logo>
+    <div class="stretcher"></div>
+    <nav>
+        <a ui-sref="app.explore" ng-class="{active: $ctrl.state == 'app.explore'}">Upptäck</a>
+        <a ui-sref="app.support" ng-class="{active: $ctrl.state == 'app.support'}">Stöd oss</a>
+        <a ui-sref="app.nominate" ng-class="{active: $ctrl.state == 'app.nominate'}">Nominera</a>
+        <a ui-sref="app.about" ng-class="{active: $ctrl.state == 'app.about'}">Stiftelsen</a>
+        <a ui-sref="app.press" ng-class="{active: $ctrl.state == 'app.press'}">Press</a>
+    </nav>
+    <div class="stretcher"></div>
+    <call-to-action ng-controller="LoginCtrl">
+        <a ui-sref="app.login" class="btn-login" ng-hide="$ctrl.loggedIn">
+            Logga in
+        </a>
+        <a ng-click="authenticate('facebook')" ui-sref="app.thankyou" class="btn-thank-police" ng-show="$ctrl.loggedIn">
+            Säg tack <span class="hidden-xs hidden-sm hidden-md">till polisen</span>
+            <!-- <span class="circle hidden-xs hidden-sm hidden-md">
+                <i class="fa fa-bullhorn" aria-hidden="true"></i>
+            </span>
+            -->
+        </a>
+        <a ui-sref="app.user" class="btn-user" ng-show="$ctrl.loggedIn">
+            <img src="/src/assets/images/default.jpg">
+            <span>Robin</span>
+        </a>
+    </call-to-action>
+</primary-menu>
+<secondary-menu>
+    <breadcrumbs>
+        <a ui-sref="#1" ng-class="{active: $ctrl.state == 'app.explore'}">Ändamål</a>
+        <a ui-sref="#2" ng-class="{active: $ctrl.state == 'app.support'}">Bakgrund</a>
+        <a ui-sref="#3" ng-class="{active: $ctrl.state == 'app.nominate'}">Värdegrund</a>
+        <a ui-sref="#4" ng-class="{active: $ctrl.state == 'app.about'}">Styrelsen</a>
+        <a ui-sref="#5" ng-class="{active: $ctrl.state == 'app.press'}">Stadgar</a>
+        <a ui-sref="#5" ng-class="{active: $ctrl.state == 'app.press'}">Mötesprotokoll</a>
+    </breadcrumbs>
+</secondary-menu>
