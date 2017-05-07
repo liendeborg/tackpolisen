@@ -12,7 +12,7 @@ function Posts($http) {
                 'Content-Type': 'application/json'
             },
             url: apiUrl + '/posts',
-            withCredentials: true,
+            withCredentials: false,
         }).then(response => response.data);
     }
 
