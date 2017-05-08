@@ -12,7 +12,7 @@ topnav {
         0px 3px 8px rgba(0,0,0,0.10);
 
     secondary-menu {
-        display: flex;
+        display: none;
         flex-direction: row;
         position: relative;
         width: 100%;
@@ -285,6 +285,15 @@ topnav {
     }
 
     @media screen and (min-width: $page-width-sm) {
+        secondary-menu {
+            display: flex;
+            breadcrumbs {
+                a {
+                    padding: 0.5em 1em;
+                    margin: 0.8em 0.5em;
+                }
+            }
+        }
         primary-menu {
             display: flex;
             flex-direction: row;
@@ -448,6 +457,15 @@ topnav {
         }
     }
     @media screen and (min-width: $page-width-lg) {
+        secondary-menu {
+            breadcrumbs {
+                a {
+                    font-size: 1.1em;
+                    padding: 0.7em 1.5em;
+                    margin: 0.8em 0.5em;
+                }
+            }
+        }
         primary-menu {
             logo {
                 font-size: 2.4em;
