@@ -29,6 +29,7 @@ card {
         height: auto;
 
         img {
+            // For smooth transition in slideshow when images have different heights
             transition: all 0.2s;
         }
     }
@@ -115,8 +116,6 @@ card {
     }
 
 
-
-
     hashtag {
         color: $color-blue;
     }
@@ -126,6 +125,29 @@ card {
             color: $color-dark-blue;
             border-bottom: 1px solid $color-dark-blue;
             text-decoration: none;
+        }
+    }
+
+
+
+    .slick-dots {
+        li { 
+            button {
+                &:before {
+                    color: $color-gray;
+                    opacity: 0.35;
+                    transition: all 0.2s;
+                    font-size: 8px !important;
+                }
+            }
+            &.slick-acitve {
+                button {
+                    &:before {
+                        color: $color-blue !important;
+                        opacity: 1;
+                    }
+                }
+            }
         }
     }
 }

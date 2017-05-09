@@ -11,6 +11,8 @@ topnav {
         0px 1px 3px rgba(0,0,0,0.22),
         0px 3px 8px rgba(0,0,0,0.10);
 
+    -webkit-font-smoothing: antialiased;
+
     secondary-menu {
         display: none;
         flex-direction: row;
