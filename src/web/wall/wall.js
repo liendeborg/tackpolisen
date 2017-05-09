@@ -16,7 +16,7 @@ angular.module('app.tackpolisen.web')
         vm.posts = [];
 
         vm.$onInit = function() {
-
+            // Fetch all posts
             Posts.getAll()
             .then((data) => {
                 vm.posts = data;
@@ -25,6 +25,8 @@ angular.module('app.tackpolisen.web')
             .catch((data) => {
                 console.log("Couldn't fetch any posts");
             })
+            
+            
 
         }
     }

@@ -1,9 +1,24 @@
-<article class="card-facebook" ng-if="$ctrl.content.type === 'facebook'"  ng-class="$ctrl.content.images.length === 0 ? 'quote' : ''" id="{{ 'card' + $ctrl.content.id }}">
-    <card-media ng-if="$ctrl.content.images.length > 0" ng-repeat="media in $ctrl.content.images">
-        <figure>
-            <img src="{{ $ctrl.content.images[0].url }}" alt="The Pulpit Rock">
-            <figcaption>{{ $ctrl.content.text }}</figcaption>
-        </figure>
+<card-wrapper 
+    class="card-facebook" ng-if="$ctrl.content.type === 'facebook'"  
+    ng-class="$ctrl.content.media.length === 0 ? 'slide-quote' : ''" 
+    id="{{ 'card' + $ctrl.content.id }}"> 
+    <card-media ng-if="$ctrl.content.media.length >= 1">
+
+        <slick settings="$ctrl.slickConfig" infinite="true" slides-to-show="1" slides-to-scroll="1">
+            <!-- ng-if="$ctrl.content.media.length > 1 -->
+            <!-- Loop through media -->
+            <slide ng-repeat="m in $ctrl.content.media">
+                <!-- Image -->
+                <image class="slide-image" ng-if="m.type === 'image'">
+                    <img src="{{ m.url }}">
+                </image>
+                <!-- Movie -->
+                <movie class="slide-movie" ng-if="m.type === 'movie'">
+                    <h1>Movie: {{ m.url }} </h1>
+                </movie>
+            </slide>
+        </slick>
+
     </card-media>
     <card-content>
         <post-details>
@@ -16,15 +31,33 @@
     <card-toolbar>
         <button type="button" class="btn-card"><i class="fa fa-share" aria-hidden="true"></i> Dela inlägg</button>
     </card-toolbar>
-</article>
+</card-wrapper>
 
 
-<article class="card-twitter" ng-if="$ctrl.content.type === 'twitter'" ng-class="$ctrl.content.images.length === 0 ? 'quote' : ''">
-    <card-media ng-if="$ctrl.content.images.length > 0" ng-repeat="media in $ctrl.content.images">
-        <figure>
-            <img src="{{ $ctrl.content.images[0].url }}" alt="The Pulpit Rock">
-            <figcaption>{{ $ctrl.content.text }}</figcaption>
-        </figure>
+<card-wrapper
+    class="card-twitter" ng-if="$ctrl.content.type === 'twitter'"  
+    ng-class="$ctrl.content.media.length === 0 ? 'slide-quote' : ''" 
+    id="{{ 'card' + $ctrl.content.id }}"> 
+    <card-media ng-if="$ctrl.content.media.length >= 1">
+
+        <slick settings="$ctrl.slickConfig" infinite="true" slides-to-show="1" slides-to-scroll="1">
+            <!-- ng-if="$ctrl.content.media.length > 1 -->
+            <!-- Loop through media -->
+            <div ng-repeat="m in $ctrl.content.media">
+                <!-- Image -->
+                <div class="slide-image" ng-if="m.type === 'image'">
+                    <figure ng-if="$ctrl.content.media.length === 1">
+                        <img src="{{ m.url }}">
+                        <figcaption>{{ $ctrl.content.text }}</figcaption>
+                    </figure>
+                </div>
+                <!-- Movie -->
+                <div class="slide-movie" ng-if="m.type === 'movie'">
+                    <h1>Movie: {{ m.url }} </h1>
+                </div>
+            </div>
+        </slick>
+
     </card-media>
     <card-content>
         <post-details>
@@ -37,15 +70,34 @@
     <card-toolbar>
         <button type="button" class="btn-card"><i class="fa fa-share" aria-hidden="true"></i> Dela inlägg</button>
     </card-toolbar>
-</article>
+</card-wrapper>
 
 
-<article class="card-instagram" ng-if="$ctrl.content.type === 'instagram'" ng-class="$ctrl.content.images.length === 0 ? 'quote' : ''">
-    <card-media ng-if="$ctrl.content.images.length > 0" ng-repeat="media in $ctrl.content.images">
-        <figure>
-            <img src="{{ $ctrl.content.images[0].url }}" alt="The Pulpit Rock">
-            <figcaption>{{ $ctrl.content.text }}</figcaption>
-        </figure>
+<card-wrapper
+    class="card-instagram" ng-if="$ctrl.content.type === 'instagram'"  
+    ng-class="$ctrl.content.media.length === 0 ? 'slide-quote' : ''" 
+    id="{{ 'card' + $ctrl.content.id }}"> 
+    <card-media ng-if="$ctrl.content.media.length >= 1">
+    <card-media ng-if="$ctrl.content.media.length >= 1">
+
+        <slick settings="$ctrl.slickConfig" infinite="true" slides-to-show="1" slides-to-scroll="1">
+            <!-- ng-if="$ctrl.content.media.length > 1 -->
+            <!-- Loop through media -->
+            <div ng-repeat="m in $ctrl.content.media">
+                <!-- Image -->
+                <div class="slide-image" ng-if="m.type === 'image'">
+                    <figure ng-if="$ctrl.content.media.length === 1">
+                        <img src="{{ m.url }}">
+                        <figcaption>{{ $ctrl.content.text }}</figcaption>
+                    </figure>
+                </div>
+                <!-- Movie -->
+                <div class="slide-movie" ng-if="m.type === 'movie'">
+                    <h1>Movie: {{ m.url }} </h1>
+                </div>
+            </div>
+        </slick>
+
     </card-media>
     <card-content>
         <post-details>
@@ -58,4 +110,4 @@
     <card-toolbar>
         <button type="button" class="btn-card"><i class="fa fa-share" aria-hidden="true"></i> Dela inlägg</button>
     </card-toolbar>
-</article>
+</card-wrapper>
