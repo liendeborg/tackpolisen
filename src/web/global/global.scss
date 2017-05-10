@@ -1,5 +1,12 @@
 @import '../../sass/modules/variables.scss';
 
+html,
+body {
+    margin: 0;
+    padding: 0;
+    //overflow: hidden;
+}
+
 body {
     background: $color-beige !important;
     //background: $color-lightest-blue !important;

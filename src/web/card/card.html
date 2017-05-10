@@ -9,13 +9,13 @@
             <!-- Loop through media -->
             <slide ng-repeat="m in $ctrl.content.media">
                 <!-- Image -->
-                <image class="slide-image" ng-if="m.type === 'image'">
-                    <img src="{{ m.url }}">
-                </image>
+                <slide-content class="slide-image" ng-if="m.type === 'image'">
+                    <img src="{{m.url}}" />
+                </slide-content>
                 <!-- Movie -->
-                <movie class="slide-movie" ng-if="m.type === 'movie'">
-                    <h1>Movie: {{ m.url }} </h1>
-                </movie>
+                <slide-content class="slide-movie" ng-if="m.type === 'movie'">
+                    <videoplayer content="m"></videoplayer>
+                </slide-content>
             </slide>
         </slick>
 
@@ -45,13 +45,13 @@
             <!-- Loop through media -->
             <slide ng-repeat="m in $ctrl.content.media">
                 <!-- Image -->
-                <image class="slide-image" ng-if="m.type === 'image'">
-                    <img src="{{ m.url }}">
-                </image>
+                <slide-content class="slide-image" ng-if="m.type === 'image'">
+                    <img src="{{m.url}}" />
+                </slide-content>
                 <!-- Movie -->
-                <movie class="slide-movie" ng-if="m.type === 'movie'">
-                    <h1>Movie: {{ m.url }} </h1>
-                </movie>
+                <slide-content class="slide-movie videogular-container" ng-if="m.type === 'movie'">
+                    <videoplayer content="{{m}}"></videoplayer>
+                </slide-content>
             </slide>
         </slick>
 
@@ -75,19 +75,19 @@
     ng-class="$ctrl.content.media.length === 0 ? 'slide-quote' : ''" 
     id="{{ 'card' + $ctrl.content.id }}"> 
     <card-media ng-if="$ctrl.content.media.length >= 1">
-        
+
         <slick settings="$ctrl.slickConfig" infinite="true" slides-to-show="1" slides-to-scroll="1">
             <!-- ng-if="$ctrl.content.media.length > 1 -->
             <!-- Loop through media -->
             <slide ng-repeat="m in $ctrl.content.media">
                 <!-- Image -->
-                <image class="slide-image" ng-if="m.type === 'image'">
-                    <img src="{{ m.url }}">
-                </image>
+                <slide-content class="slide-image" ng-if="m.type === 'image'">
+                    <img src="{{m.url}}" />
+                </slide-content>
                 <!-- Movie -->
-                <movie class="slide-movie" ng-if="m.type === 'movie'">
-                    <h1>Movie: {{ m.url }} </h1>
-                </movie>
+                <slide-content class="slide-movie videogular-container" ng-if="m.type === 'movie'">
+                    <videoplayer content="{{m}}"></videoplayer>
+                </slide-content>
             </slide>
         </slick>
 
