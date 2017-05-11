@@ -19,44 +19,44 @@ angular.module('app.tackpolisen.web')
 
 
         vm.$onInit = function () {
-            vm.content = {
-                handle: "@dudedudesson",
-                media: [
-                    {
-                        type: "movie",
-                        sources: [
-                            {src: "http://static.videogular.com/assets/videos/videogular.mp4", type: "video/mp4"},
-                            {src: "http://static.videogular.com/assets/videos/videogular.webm", type: "video/webm"},
-                            {src: "http://static.videogular.com/assets/videos/videogular.ogg", type: "video/ogg"}
-                        ]
-                    },
-                    {
-                        type: "image",
-                        url: "https://s3.eu-central-1.amazonaws.com/tackpolisen/3fd8cca2-3a95-4597-bcd4-5eb8dfd6ed76.jpeg"
-                    },
-                    {
-                        type: "image",
-                        url: "https://s3.eu-central-1.amazonaws.com/tackpolisen/3fd8cca2-3a95-4597-bcd4-5eb8dfd6ed76.jpeg"
-                    },
-                    {
-                        type: "image",
-                        url: "https://s3.eu-central-1.amazonaws.com/tackpolisen/3fd8cca2-3a95-4597-bcd4-5eb8dfd6ed76.jpeg"
-                    },
-                    {
-                        type: "movie",
-                        sources: [
-                            {src: "http://static.videogular.com/assets/videos/videogular.mp4", type: "video/mp4"},
-                            {src: "http://static.videogular.com/assets/videos/videogular.webm", type: "video/webm"},
-                            {src: "http://static.videogular.com/assets/videos/videogular.ogg", type: "video/ogg"}
-                        ]
-                    }
-                ],
-                poster: "kristinfisher@maxemia.com",
-                text: "Est qui reprehenderit nisi enim. Ad incididunt in tempor Lorem voluptate aliquip consequat pariatur ad sit adipisicing nulla anim cupidatat. Elit aliqua adipisicing esse deserunt consequat sint proident culpa aliqua adipisicing id eiusmod. Adipisicing laboris dolore commodo mollit ex voluptate. Ipsum deserunt id in id ut anim deserunt in qui nostrud id dolore exercitation duis. Aliquip in proident duis eiusmod velit ex sint adipisicing voluptate reprehenderit. Cillum ad elit irure consectetur duis fugiat est ut.\r\n",
-                id: 11,
-                name: "Kristin Fisher",
-                type: "instagram"
-            };
+            // vm.content = {
+            //     handle: "@dudedudesson",
+            //     media: [
+                    // {
+                    //     type: "movie",
+                    //     sources: [
+                    //         {src: "http://static.videogular.com/assets/videos/videogular.mp4", type: "video/mp4"},
+                    //         {src: "http://static.videogular.com/assets/videos/videogular.webm", type: "video/webm"},
+                    //         {src: "http://static.videogular.com/assets/videos/videogular.ogg", type: "video/ogg"}
+                    //     ]
+                    // },
+            //         {
+            //             type: "image",
+            //             url: "https://s3.eu-central-1.amazonaws.com/tackpolisen/3fd8cca2-3a95-4597-bcd4-5eb8dfd6ed76.jpeg"
+            //         },
+            //         {
+            //             type: "image",
+            //             url: "https://s3.eu-central-1.amazonaws.com/tackpolisen/3fd8cca2-3a95-4597-bcd4-5eb8dfd6ed76.jpeg"
+            //         },
+            //         {
+            //             type: "image",
+            //             url: "https://s3.eu-central-1.amazonaws.com/tackpolisen/3fd8cca2-3a95-4597-bcd4-5eb8dfd6ed76.jpeg"
+            //         },
+            //         {
+            //             type: "movie",
+            //             sources: [
+            //                 {src: "http://static.videogular.com/assets/videos/videogular.mp4", type: "video/mp4"},
+            //                 {src: "http://static.videogular.com/assets/videos/videogular.webm", type: "video/webm"},
+            //                 {src: "http://static.videogular.com/assets/videos/videogular.ogg", type: "video/ogg"}
+            //             ]
+            //         }
+            //     ],
+            //     poster: "kristinfisher@maxemia.com",
+            //     text: "Est qui reprehenderit nisi enim. Ad incididunt in tempor Lorem voluptate aliquip consequat pariatur ad sit adipisicing nulla anim cupidatat. Elit aliqua adipisicing esse deserunt consequat sint proident culpa aliqua adipisicing id eiusmod. Adipisicing laboris dolore commodo mollit ex voluptate. Ipsum deserunt id in id ut anim deserunt in qui nostrud id dolore exercitation duis. Aliquip in proident duis eiusmod velit ex sint adipisicing voluptate reprehenderit. Cillum ad elit irure consectetur duis fugiat est ut.\r\n",
+            //     id: 11,
+            //     name: "Kristin Fisher",
+            //     type: "instagram"
+            // };
             //vm.content = JSON.parse(vm.content);
 
             // Angular Slick Carousel

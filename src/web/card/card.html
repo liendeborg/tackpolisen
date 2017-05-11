@@ -8,12 +8,13 @@
             <!-- ng-if="$ctrl.content.media.length > 1 -->
             <!-- Loop through media -->
             <slide ng-repeat="m in $ctrl.content.media">
+                <!--<pre>{{ m | json }}</pre>-->
                 <!-- Image -->
                 <slide-content class="slide-image" ng-if="m.type === 'image'">
                     <img src="{{m.url}}" />
                 </slide-content>
-                <!-- Movie -->
-                <slide-content class="slide-movie" ng-if="m.type === 'movie'">
+                <!-- Video -->
+                <slide-content class="slide-video videogular-container" ng-if="m.type === 'video'">
                     <videoplayer content="m"></videoplayer>
                 </slide-content>
             </slide>
@@ -44,13 +45,14 @@
             <!-- ng-if="$ctrl.content.media.length > 1 -->
             <!-- Loop through media -->
             <slide ng-repeat="m in $ctrl.content.media">
+                <!--<pre>{{ m | json }}</pre>-->
                 <!-- Image -->
                 <slide-content class="slide-image" ng-if="m.type === 'image'">
                     <img src="{{m.url}}" />
                 </slide-content>
-                <!-- Movie -->
-                <slide-content class="slide-movie videogular-container" ng-if="m.type === 'movie'">
-                    <videoplayer content="{{m}}"></videoplayer>
+                <!-- Video -->
+                <slide-content class="slide-video videogular-container" ng-if="m.type === 'video'">
+                    <videoplayer content="m"></videoplayer>
                 </slide-content>
             </slide>
         </slick>
@@ -80,13 +82,14 @@
             <!-- ng-if="$ctrl.content.media.length > 1 -->
             <!-- Loop through media -->
             <slide ng-repeat="m in $ctrl.content.media">
+                <!--<pre>{{ m | json }}</pre>-->
                 <!-- Image -->
                 <slide-content class="slide-image" ng-if="m.type === 'image'">
                     <img src="{{m.url}}" />
                 </slide-content>
-                <!-- Movie -->
-                <slide-content class="slide-movie videogular-container" ng-if="m.type === 'movie'">
-                    <videoplayer content="{{m}}"></videoplayer>
+                <!-- Video -->
+                <slide-content class="slide-video videogular-container" ng-if="m.type === 'video'">
+                    <videoplayer content="m"></videoplayer>
                 </slide-content>
             </slide>
         </slick>

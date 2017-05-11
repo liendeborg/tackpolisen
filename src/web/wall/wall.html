@@ -1,7 +1,8 @@
+<!--<pre>{{ $ctrl.posts | json }}</pre>-->
  <card-container>
-    <card ng-repeat="post in $ctrl.posts" content="post"></card>
+    <card ng-repeat="post in $ctrl.posts | orderBy:'type'" content="post" ng-show="post"></card>
 </card-container>
 <button type="button" ng-click="" class="btn btn-blue btn-load-card">
     Ladda fler inlägg
 </button>
-<pre>{{ $ctrl.posts | json }}</pre>
+

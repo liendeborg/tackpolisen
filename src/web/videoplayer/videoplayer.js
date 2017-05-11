@@ -1,13 +1,13 @@
 const template = require('./videoplayer.html');
-require('./videogular.scss');
 require('./videoplayer.scss');
+
 
 angular.module('app.tackpolisen.web')
     .component('videoplayer', {
         templateUrl: template,
         controller: VideoplayerController,
         bindings: {
-            'content': '@'
+            'content': '<'
         }
     });
     // .filter('trustUrl', function ($sce) {
@@ -21,28 +21,17 @@ angular.module('app.tackpolisen.web')
         const vm = this;
 
         vm.$onInit = function () {
-            console.log("Media innehåller:");
-            console.log(vm.content);
-
+            //vm.content = JSON.parse(vm.content);
+            //console.log(vm.content);
+            console.log("Film JSON");
+            var fileSource = vm.getMediaFile(vm.content);
+            //console.log(vm.getMediaFile(vm.content));
+            // vm.API = null;
+            // vm.onPlayerReady = function ($API) { 
+            //     vm.$API = $API; 
+            // };
             vm.config = {
-                //sources: vm.formatSources(vm.media),        
-				sources: [
-                    {src: $sce.trustAsResourceUrl("http://static.videogular.com/assets/videos/videogular.mp4"), type: "video/mp4"},
-					{src: $sce.trustAsResourceUrl("http://static.videogular.com/assets/videos/videogular.webm"), type: "video/webm"},
-					{src: $sce.trustAsResourceUrl("http://static.videogular.com/assets/videos/videogular.ogg"), type: "video/ogg"}
-                    // {src: $sce.trustAsResourceUrl("http://static.videogular.com/assets/videos/videogular.mp4"), type: "video/mp4"},
-					// {src: $sce.trustAsResourceUrl("http://static.videogular.com/assets/videos/videogular.webm"), type: "video/webm"},
-					// {src: $sce.trustAsResourceUrl("http://static.videogular.com/assets/videos/videogular.ogg"), type: "video/ogg"}
-				],
-				tracks: [
-					{
-						src: "http://www.videogular.com/assets/subs/pale-blue-dot.vtt",
-						kind: "subtitles",
-						srclang: "en",
-						label: "English",
-						default: ""
-					}
-				],
+                sources: fileSource,        
                 controls: true,
                 loop: false,
                 autoplay: true,
@@ -51,7 +40,8 @@ angular.module('app.tackpolisen.web')
                 preload: false,
                 theme: {
                     default: {
-                        url: "node_modules/videogular/dist/themes/default/videogular.css"
+                        //url: "node_modules/videogular/dist/themes/default/videogular.css"
+                        url: "node_modules/videogular-themes-default/videogular.css"
                     }
                 },
 				plugins: {
@@ -59,29 +49,54 @@ angular.module('app.tackpolisen.web')
                         autohide: false,
                         autohideTime: 5000
                     },
-					poster: "http://www.videogular.com/assets/images/videogular.png"
-				}
+					// poster: "http://www.videogular.com/assets/images/videogular.png"
+                    poster: "http://upload.wikimedia.org/wikipedia/commons/5/5f/Sky_Blue.png"
+				},
+                sources: [
+                 {src: $sce.trustAsResourceUrl("http://static.videogular.com/assets/videos/videogular.mp4"), type: "video/mp4"},
+					{src: $sce.trustAsResourceUrl("http://static.videogular.com/assets/videos/videogular.webm"), type: "video/webm"},
+					{src: $sce.trustAsResourceUrl("http://static.videogular.com/assets/videos/videogular.ogg"), type: "video/ogg"}
+				]
+				// tracks: [
+				// 	{
+				// 		src: "http://www.videogular.com/assets/subs/pale-blue-dot.vtt",
+				// 		kind: "subtitles",
+				// 		srclang: "en",
+				// 		label: "English",
+				// 		default: ""
+				// 	}
+				// ],
 			};
-
-            //console.log(vm.videogularConfig.sources[0]);
-
         };
 
 
-
-        vm.formatSources = function ( object ) {
-            console.log("Object");
-            console.log(object);
+        vm.getMediaFile = function(post) {
+            // console.log(post);
             let sources = [];
-            let source = {};
-            for(let i; i < object.media.length; i++) {
-                source = {
-                    'src': $sce.trustAsResourceUrl( object.media[i].src ), 
-                    'type': object.media[i].type
+            let fileUrl, fileType = '';
+
+            for(let i = 0; i < post.sources.length; i++) {
+                let file = {
+                    src: '',
+                    type: ''
                 };
-                sources.push(source);
+                fileUrl = post.sources[i].src;
+                fileType = post.sources[i].type;
+
+                // http://static.videogular.com/assets/videos/videogular.mp4
+                file.src = $sce.trustAsResourceUrl(fileUrl); 
+                // video/mp4
+                file.type = fileType;
+
+                // console.log("FILE "+i);
+                // console.log(file);
+                sources.push(file);
+                // console.log("SOURCES "+i);
+                // console.log(sources[i]);                
+
             }
+            // console.log("####################");
+            // console.log(sources);
             return sources;
         }
-
     }

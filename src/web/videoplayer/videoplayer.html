@@ -1,7 +1,8 @@
-<pre>{{ $ctrl.config | json }}</pre>
+<!--<pre>{{ $ctrl.config | json }}</pre>-->
 <div class="videogular-container">
     <!-- vg-config="assets/data/config.json"-->
     <videogular 
+        vg-config="$ctrl.config"
         vg-theme="$ctrl.config.theme.default.url"
         vg-autoplay="$ctrl.config.autoplay"
         vg-loop="$ctrl.config.loop" class="$ctrl.config.auto-play">
