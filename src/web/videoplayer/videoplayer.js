@@ -1,6 +1,11 @@
 const template = require('./videoplayer.html');
 require('./videoplayer.scss');
-
+// require('./videogular.scss');
+// require('./fonts/videogular.woff');
+// require('./fonts/videogular.ttf');
+// require('./fonts/videogular.svg');
+// require('./fonts/videogular.eot');
+// require('./fonts/videogular.dev.svg');
 
 angular.module('app.tackpolisen.web')
     .component('videoplayer', {
@@ -23,13 +28,13 @@ angular.module('app.tackpolisen.web')
         vm.$onInit = function () {
             //vm.content = JSON.parse(vm.content);
             //console.log(vm.content);
-            console.log("Film JSON");
+            console.log("Kom in i videogular");
             var fileSource = vm.getMediaFile(vm.content);
             //console.log(vm.getMediaFile(vm.content));
-            // vm.API = null;
-            // vm.onPlayerReady = function ($API) { 
-            //     vm.$API = $API; 
-            // };
+            vm.API = null;
+            vm.onPlayerReady = function ($API) { 
+                vm.$API = $API; 
+            };
             vm.config = {
                 sources: fileSource,        
                 controls: true,
@@ -56,16 +61,16 @@ angular.module('app.tackpolisen.web')
                  {src: $sce.trustAsResourceUrl("http://static.videogular.com/assets/videos/videogular.mp4"), type: "video/mp4"},
 					{src: $sce.trustAsResourceUrl("http://static.videogular.com/assets/videos/videogular.webm"), type: "video/webm"},
 					{src: $sce.trustAsResourceUrl("http://static.videogular.com/assets/videos/videogular.ogg"), type: "video/ogg"}
+				],
+				tracks: [
+					{
+						src: "http://www.videogular.com/assets/subs/pale-blue-dot.vtt",
+						kind: "subtitles",
+						srclang: "en",
+						label: "English",
+						default: ""
+					}
 				]
-				// tracks: [
-				// 	{
-				// 		src: "http://www.videogular.com/assets/subs/pale-blue-dot.vtt",
-				// 		kind: "subtitles",
-				// 		srclang: "en",
-				// 		label: "English",
-				// 		default: ""
-				// 	}
-				// ],
 			};
         };
 
